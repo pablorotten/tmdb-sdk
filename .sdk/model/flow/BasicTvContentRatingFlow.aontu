@@ -1,0 +1,26 @@
+# BasicTvContentRatingFlow
+
+main: kit: flow: BasicTvContentRatingFlow:
+{
+  entity: "tv_content_rating",
+  kind: "basic",
+  name: "BasicTvContentRatingFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_content_rating_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvContentRatingFlow"
+}

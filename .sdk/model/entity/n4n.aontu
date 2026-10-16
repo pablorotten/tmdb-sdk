@@ -1,0 +1,77 @@
+# Entity: n4n
+
+main: kit: entity: n4n: {
+
+  alias: field: {}
+
+  fields: {
+    RAW_BODY: {
+      fo: "json"
+      h: "Raw Body"
+      n: "RAW_BODY"
+      r: true
+      t: "`$STRING`"
+    }
+    session_id: {
+      h: "Session Id"
+      n: "session_id"
+      r: false
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "n4n"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "RAW_BODY"
+          ]
+          co: {
+            id: "POST /3/authentication/session/convert/4"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/3/authentication/session/convert/4"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "session"
+            }
+            {
+              lit: "convert"
+            }
+            {
+              lit: "4"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

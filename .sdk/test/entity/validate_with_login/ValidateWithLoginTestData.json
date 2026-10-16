@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "validate_with_login": {
+      "VALIDATE_WITH_LOGIN00": {
+        "RAW_BODY": "s28",
+        "expires_at": "s29",
+        "request_token": "s2a",
+        "success": false,
+        "id": "VALIDATE_WITH_LOGIN00"
+      },
+      "VALIDATE_WITH_LOGIN01": {
+        "RAW_BODY": "s50",
+        "expires_at": "s51",
+        "request_token": "s52",
+        "success": false,
+        "id": "VALIDATE_WITH_LOGIN01"
+      },
+      "VALIDATE_WITH_LOGIN02": {
+        "RAW_BODY": "s78",
+        "expires_at": "s79",
+        "request_token": "s7a",
+        "success": false,
+        "id": "VALIDATE_WITH_LOGIN02"
+      }
+    }
+  },
+  "new": {
+    "validate_with_login": {
+      "validate_with_login_ref01": {
+        "RAW_BODY": "sa0",
+        "expires_at": "sa1",
+        "request_token": "sa2",
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "POST /3/authentication/token/validate_with_login": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

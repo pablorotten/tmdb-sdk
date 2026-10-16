@@ -1,0 +1,62 @@
+{
+  "existing": {
+    "new": {
+      "NEW00": {
+        "RAW_BODY": "s3c",
+        "expires_at": "s3d",
+        "guest_session_id": "GUEST_SESSION01",
+        "request_token": "s3f",
+        "session_id": "SESSION01",
+        "success": false,
+        "id": "NEW00"
+      },
+      "NEW01": {
+        "RAW_BODY": "s78",
+        "expires_at": "s79",
+        "guest_session_id": "GUEST_SESSION01",
+        "request_token": "s7b",
+        "session_id": "SESSION01",
+        "success": false,
+        "id": "NEW01"
+      },
+      "NEW02": {
+        "RAW_BODY": "sb4",
+        "expires_at": "sb5",
+        "guest_session_id": "GUEST_SESSION01",
+        "request_token": "sb7",
+        "session_id": "SESSION01",
+        "success": false,
+        "id": "NEW02"
+      }
+    }
+  },
+  "new": {
+    "new": {
+      "new_ref01": {
+        "RAW_BODY": "sf0",
+        "expires_at": "sf1",
+        "guest_session_id": "GUEST_SESSION01",
+        "request_token": "sf3",
+        "session_id": "SESSION01",
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "POST /3/authentication/session/new": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/authentication/guest_session/new": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/authentication/token/new": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

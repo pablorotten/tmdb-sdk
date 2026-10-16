@@ -1,0 +1,219 @@
+# Entity: collection
+
+main: kit: entity: collection: {
+
+  alias: field: {}
+
+  fields: {
+    adult: {
+      h: "Adult"
+      n: "adult"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    backdrop_path: {
+      h: "Backdrop Path"
+      n: "backdrop_path"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    original_language: {
+      h: "Original Language"
+      n: "original_language"
+      r: false
+      t: "`$STRING`"
+    }
+    original_name: {
+      h: "Original Name"
+      n: "original_name"
+      r: false
+      t: "`$STRING`"
+    }
+    overview: {
+      h: "Overview"
+      n: "overview"
+      r: false
+      t: "`$STRING`"
+    }
+    parts: {
+      h: "Parts"
+      n: "parts"
+      r: false
+      t: "`$ARRAY`"
+    }
+    poster_path: {
+      h: "Poster Path"
+      n: "poster_path"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "collection"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/search/collection"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: false
+                k: "query"
+                n: "include_adult"
+                or: "include_adult"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "query"
+                or: "query"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "region"
+                or: "region"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/search/collection"
+          q: {
+            exist: [
+              "query"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "search"
+            }
+            {
+              lit: "collection"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/collection/{collection_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "collection_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/collection/{collection_id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              collection_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "collection"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

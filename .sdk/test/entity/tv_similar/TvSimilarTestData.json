@@ -1,0 +1,80 @@
+{
+  "existing": {
+    "tv_similar": {
+      "TV_SIMILAR00": {
+        "adult": true,
+        "backdrop_path": "s8d",
+        "first_air_date": "s8e",
+        "genre_ids": [],
+        "id": "TV_SIMILAR00",
+        "name": "s91",
+        "origin_country": [],
+        "original_language": "s93",
+        "original_name": "s94",
+        "overview": "s95",
+        "popularity": 150,
+        "poster_path": "s97",
+        "vote_average": 152,
+        "vote_count": 153
+      },
+      "TV_SIMILAR01": {
+        "adult": true,
+        "backdrop_path": "s119",
+        "first_air_date": "s11a",
+        "genre_ids": [],
+        "id": "TV_SIMILAR01",
+        "name": "s11d",
+        "origin_country": [],
+        "original_language": "s11f",
+        "original_name": "s120",
+        "overview": "s121",
+        "popularity": 290,
+        "poster_path": "s123",
+        "vote_average": 292,
+        "vote_count": 293
+      },
+      "TV_SIMILAR02": {
+        "adult": true,
+        "backdrop_path": "s1a5",
+        "first_air_date": "s1a6",
+        "genre_ids": [],
+        "id": "TV_SIMILAR02",
+        "name": "s1a9",
+        "origin_country": [],
+        "original_language": "s1ab",
+        "original_name": "s1ac",
+        "overview": "s1ad",
+        "popularity": 430,
+        "poster_path": "s1af",
+        "vote_average": 432,
+        "vote_count": 433
+      }
+    }
+  },
+  "new": {
+    "tv_similar": {
+      "tv_similar_ref01": {
+        "adult": true,
+        "backdrop_path": "s231",
+        "first_air_date": "s232",
+        "genre_ids": [],
+        "name": "s235",
+        "origin_country": [],
+        "original_language": "s237",
+        "original_name": "s238",
+        "overview": "s239",
+        "popularity": 570,
+        "poster_path": "s23b",
+        "vote_average": 572,
+        "vote_count": 573
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/similar": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

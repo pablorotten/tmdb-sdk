@@ -1,0 +1,26 @@
+# BasicAccountListFlow
+
+main: kit: flow: BasicAccountListFlow:
+{
+  entity: "account_list",
+  kind: "basic",
+  name: "BasicAccountListFlow",
+  step: [
+    {
+      m: {
+        account_id: "account01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "account_list_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAccountListFlow"
+}

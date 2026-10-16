@@ -1,0 +1,26 @@
+# BasicTvSimilarFlow
+
+main: kit: flow: BasicTvSimilarFlow:
+{
+  entity: "tv_similar",
+  kind: "basic",
+  name: "BasicTvSimilarFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_similar_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvSimilarFlow"
+}

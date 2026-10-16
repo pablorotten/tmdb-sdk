@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "tv_content_rating": {
+      "TV_CONTENT_RATING00": {
+        "descriptors": [],
+        "id": "TV_CONTENT_RATING00",
+        "iso_3166_1": "s2a",
+        "rating": "s2b"
+      },
+      "TV_CONTENT_RATING01": {
+        "descriptors": [],
+        "id": "TV_CONTENT_RATING01",
+        "iso_3166_1": "s52",
+        "rating": "s53"
+      },
+      "TV_CONTENT_RATING02": {
+        "descriptors": [],
+        "id": "TV_CONTENT_RATING02",
+        "iso_3166_1": "s7a",
+        "rating": "s7b"
+      }
+    }
+  },
+  "new": {
+    "tv_content_rating": {
+      "tv_content_rating_ref01": {
+        "descriptors": [],
+        "iso_3166_1": "sa2",
+        "rating": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/content_ratings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

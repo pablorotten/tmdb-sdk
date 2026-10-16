@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "timezone": {
+      "TIMEZONE00": {
+        "iso_3166_1": "s14",
+        "zones": []
+      },
+      "TIMEZONE01": {
+        "iso_3166_1": "s28",
+        "zones": []
+      },
+      "TIMEZONE02": {
+        "iso_3166_1": "s3c",
+        "zones": []
+      }
+    }
+  },
+  "new": {
+    "timezone": {
+      "timezone_ref01": {
+        "iso_3166_1": "s50",
+        "zones": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/configuration/timezones": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

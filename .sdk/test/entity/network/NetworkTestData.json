@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "network": {
+      "NETWORK00": {
+        "headquarters": "s3c",
+        "homepage": "s3d",
+        "id": "NETWORK00",
+        "logo_path": "s3f",
+        "name": "s40",
+        "origin_country": "s41"
+      },
+      "NETWORK01": {
+        "headquarters": "s78",
+        "homepage": "s79",
+        "id": "NETWORK01",
+        "logo_path": "s7b",
+        "name": "s7c",
+        "origin_country": "s7d"
+      },
+      "NETWORK02": {
+        "headquarters": "sb4",
+        "homepage": "sb5",
+        "id": "NETWORK02",
+        "logo_path": "sb7",
+        "name": "sb8",
+        "origin_country": "sb9"
+      }
+    }
+  },
+  "new": {
+    "network": {
+      "network_ref01": {
+        "headquarters": "sf0",
+        "homepage": "sf1",
+        "logo_path": "sf3",
+        "name": "sf4",
+        "origin_country": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/network/{network_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

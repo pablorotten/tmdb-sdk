@@ -1,0 +1,106 @@
+# Entity: person_movie_credit
+
+main: kit: entity: person_movie_credit: {
+
+  alias: field: {}
+
+  fields: {
+    cast: {
+      h: "Cast"
+      n: "cast"
+      r: false
+      t: "`$ARRAY`"
+    }
+    crew: {
+      h: "Crew"
+      n: "crew"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "person_movie_credit"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/person/{person_id}/movie_credits"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "person_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/person/{person_id}/movie_credits"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              person_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "person"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "movie_credits"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

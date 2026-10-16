@@ -1,0 +1,26 @@
+# BasicCompanyImageFlow
+
+main: kit: flow: BasicCompanyImageFlow:
+{
+  entity: "company_image",
+  kind: "basic",
+  name: "BasicCompanyImageFlow",
+  step: [
+    {
+      m: {
+        company_id: "company01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "company_image_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCompanyImageFlow"
+}

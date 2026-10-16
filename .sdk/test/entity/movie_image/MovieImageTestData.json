@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "movie_image": {
+      "MOVIE_IMAGE00": {
+        "backdrops": [],
+        "id": "MOVIE_IMAGE00",
+        "logos": [],
+        "posters": []
+      },
+      "MOVIE_IMAGE01": {
+        "backdrops": [],
+        "id": "MOVIE_IMAGE01",
+        "logos": [],
+        "posters": []
+      },
+      "MOVIE_IMAGE02": {
+        "backdrops": [],
+        "id": "MOVIE_IMAGE02",
+        "logos": [],
+        "posters": []
+      }
+    }
+  },
+  "new": {
+    "movie_image": {
+      "movie_image_ref01": {
+        "backdrops": [],
+        "logos": [],
+        "posters": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/movie/{movie_id}/images": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

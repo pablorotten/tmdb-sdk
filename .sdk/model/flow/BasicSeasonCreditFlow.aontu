@@ -1,0 +1,27 @@
+# BasicSeasonCreditFlow
+
+main: kit: flow: BasicSeasonCreditFlow:
+{
+  entity: "season_credit",
+  kind: "basic",
+  name: "BasicSeasonCreditFlow",
+  step: [
+    {
+      m: {
+        season_number: "season_number01",
+        tv_id: "tv01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "season_credit_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSeasonCreditFlow"
+}

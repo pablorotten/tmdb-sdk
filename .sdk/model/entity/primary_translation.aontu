@@ -1,0 +1,49 @@
+# Entity: primary_translation
+
+main: kit: entity: primary_translation: {
+
+  alias: field: {}
+
+  name: "primary_translation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/configuration/primary_translations"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/configuration/primary_translations"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "configuration"
+            }
+            {
+              lit: "primary_translations"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

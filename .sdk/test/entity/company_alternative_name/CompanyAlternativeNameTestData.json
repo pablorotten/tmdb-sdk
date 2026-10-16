@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "company_alternative_name": {
+      "COMPANY_ALTERNATIVE_NAME00": {
+        "id": "COMPANY_ALTERNATIVE_NAME00",
+        "name": "s1f",
+        "type": "s20"
+      },
+      "COMPANY_ALTERNATIVE_NAME01": {
+        "id": "COMPANY_ALTERNATIVE_NAME01",
+        "name": "s3d",
+        "type": "s3e"
+      },
+      "COMPANY_ALTERNATIVE_NAME02": {
+        "id": "COMPANY_ALTERNATIVE_NAME02",
+        "name": "s5b",
+        "type": "s5c"
+      }
+    }
+  },
+  "new": {
+    "company_alternative_name": {
+      "company_alternative_name_ref01": {
+        "name": "s79",
+        "type": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/company/{company_id}/alternative_names": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+# Entity: collection_image
+
+main: kit: entity: collection_image: {
+
+  alias: field: {}
+
+  fields: {
+    backdrops: {
+      h: "Backdrops"
+      n: "backdrops"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    posters: {
+      h: "Posters"
+      n: "posters"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "collection_image"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/collection/{collection_id}/images"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "collection_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "include_image_language"
+                or: "include_image_language"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/collection/{collection_id}/images"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              collection_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "collection"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "images"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,141 @@
+# Entity: review
+
+main: kit: entity: review: {
+
+  alias: field: {}
+
+  fields: {
+    author: {
+      h: "Author"
+      n: "author"
+      r: false
+      t: "`$STRING`"
+    }
+    author_details: {
+      h: "Author Details"
+      n: "author_details"
+      r: false
+      t: "`$OBJECT`"
+    }
+    content: {
+      h: "Content"
+      n: "content"
+      r: false
+      t: "`$STRING`"
+    }
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    iso_639_1: {
+      h: "Iso 639 1"
+      n: "iso_639_1"
+      r: false
+      t: "`$STRING`"
+    }
+    media_id: {
+      h: "Media Id"
+      n: "media_id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    media_title: {
+      h: "Media Title"
+      n: "media_title"
+      r: false
+      t: "`$STRING`"
+    }
+    media_type: {
+      h: "Media Type"
+      n: "media_type"
+      r: false
+      t: "`$STRING`"
+    }
+    updated_at: {
+      h: "Updated At"
+      n: "updated_at"
+      r: false
+      t: "`$STRING`"
+    }
+    url: {
+      h: "Url"
+      n: "url"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "review"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/review/{review_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "review_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/review/{review_id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              review_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "review"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

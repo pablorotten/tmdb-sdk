@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "person_image": {
+      "PERSON_IMAGE00": {
+        "aspect_ratio": 80,
+        "file_path": "s51",
+        "height": 82,
+        "id": "PERSON_IMAGE00",
+        "iso_639_1": "s54",
+        "vote_average": 85,
+        "vote_count": 86,
+        "width": 87
+      },
+      "PERSON_IMAGE01": {
+        "aspect_ratio": 160,
+        "file_path": "sa1",
+        "height": 162,
+        "id": "PERSON_IMAGE01",
+        "iso_639_1": "sa4",
+        "vote_average": 165,
+        "vote_count": 166,
+        "width": 167
+      },
+      "PERSON_IMAGE02": {
+        "aspect_ratio": 240,
+        "file_path": "sf1",
+        "height": 242,
+        "id": "PERSON_IMAGE02",
+        "iso_639_1": "sf4",
+        "vote_average": 245,
+        "vote_count": 246,
+        "width": 247
+      }
+    }
+  },
+  "new": {
+    "person_image": {
+      "person_image_ref01": {
+        "aspect_ratio": 320,
+        "file_path": "s141",
+        "height": 322,
+        "iso_639_1": "s144",
+        "vote_average": 325,
+        "vote_count": 326,
+        "width": 327
+      }
+    }
+  },
+  "requests": {
+    "GET /3/person/{person_id}/images": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

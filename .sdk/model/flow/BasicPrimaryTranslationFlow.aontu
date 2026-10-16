@@ -1,0 +1,22 @@
+# BasicPrimaryTranslationFlow
+
+main: kit: flow: BasicPrimaryTranslationFlow:
+{
+  entity: "primary_translation",
+  kind: "basic",
+  name: "BasicPrimaryTranslationFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "primary_translation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPrimaryTranslationFlow"
+}

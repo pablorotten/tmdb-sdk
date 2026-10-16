@@ -1,0 +1,22 @@
+# BasicFavoriteFlow
+
+main: kit: flow: BasicFavoriteFlow:
+{
+  entity: "favorite",
+  kind: "basic",
+  name: "BasicFavoriteFlow",
+  step: [
+    {
+      i: {
+        ref: "favorite_ref01"
+      }
+
+      m: {
+        account_id: "account01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicFavoriteFlow"
+}

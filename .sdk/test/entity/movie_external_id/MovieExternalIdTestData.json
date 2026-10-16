@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "movie_external_id": {
+      "MOVIE_EXTERNAL_ID00": {
+        "facebook_id": "FACEBOOK01",
+        "id": "MOVIE_EXTERNAL_ID00",
+        "imdb_id": "IMDB01",
+        "instagram_id": "INSTAGRAM01",
+        "twitter_id": "TWITTER01",
+        "wikidata_id": "WIKIDATA01"
+      },
+      "MOVIE_EXTERNAL_ID01": {
+        "facebook_id": "FACEBOOK01",
+        "id": "MOVIE_EXTERNAL_ID01",
+        "imdb_id": "IMDB01",
+        "instagram_id": "INSTAGRAM01",
+        "twitter_id": "TWITTER01",
+        "wikidata_id": "WIKIDATA01"
+      },
+      "MOVIE_EXTERNAL_ID02": {
+        "facebook_id": "FACEBOOK01",
+        "id": "MOVIE_EXTERNAL_ID02",
+        "imdb_id": "IMDB01",
+        "instagram_id": "INSTAGRAM01",
+        "twitter_id": "TWITTER01",
+        "wikidata_id": "WIKIDATA01"
+      }
+    }
+  },
+  "new": {
+    "movie_external_id": {
+      "movie_external_id_ref01": {
+        "facebook_id": "FACEBOOK01",
+        "imdb_id": "IMDB01",
+        "instagram_id": "INSTAGRAM01",
+        "twitter_id": "TWITTER01",
+        "wikidata_id": "WIKIDATA01"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/movie/{movie_id}/external_ids": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+# Entity: tv_account_state
+
+main: kit: entity: tv_account_state: {
+
+  alias: field: {}
+
+  fields: {
+    favorite: {
+      h: "Favorite"
+      n: "favorite"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    rated: {
+      h: "Rated"
+      n: "rated"
+      r: false
+      t: "`$OBJECT`"
+    }
+    watchlist: {
+      h: "Watchlist"
+      n: "watchlist"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "tv_account_state"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/account_states"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "guest_session_id"
+                or: "guest_session_id"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/account_states"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              series_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "account_states"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

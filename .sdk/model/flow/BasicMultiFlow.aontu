@@ -1,0 +1,22 @@
+# BasicMultiFlow
+
+main: kit: flow: BasicMultiFlow:
+{
+  entity: "multi",
+  kind: "basic",
+  name: "BasicMultiFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "multi_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMultiFlow"
+}

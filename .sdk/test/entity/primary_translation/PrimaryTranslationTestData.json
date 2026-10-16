@@ -1,0 +1,21 @@
+{
+  "existing": {
+    "primary_translation": {
+      "PRIMARY_TRANSLATION00": {},
+      "PRIMARY_TRANSLATION01": {},
+      "PRIMARY_TRANSLATION02": {}
+    }
+  },
+  "new": {
+    "primary_translation": {
+      "primary_translation_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /3/configuration/primary_translations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

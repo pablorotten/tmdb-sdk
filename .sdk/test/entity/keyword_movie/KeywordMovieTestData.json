@@ -1,0 +1,80 @@
+{
+  "existing": {
+    "keyword_movie": {
+      "KEYWORD_MOVIE00": {
+        "adult": true,
+        "backdrop_path": "s8d",
+        "genre_ids": [],
+        "id": "KEYWORD_MOVIE00",
+        "original_language": "s90",
+        "original_title": "s91",
+        "overview": "s92",
+        "popularity": 147,
+        "poster_path": "s94",
+        "release_date": "s95",
+        "title": "s96",
+        "video": false,
+        "vote_average": 152,
+        "vote_count": 153
+      },
+      "KEYWORD_MOVIE01": {
+        "adult": true,
+        "backdrop_path": "s119",
+        "genre_ids": [],
+        "id": "KEYWORD_MOVIE01",
+        "original_language": "s11c",
+        "original_title": "s11d",
+        "overview": "s11e",
+        "popularity": 287,
+        "poster_path": "s120",
+        "release_date": "s121",
+        "title": "s122",
+        "video": false,
+        "vote_average": 292,
+        "vote_count": 293
+      },
+      "KEYWORD_MOVIE02": {
+        "adult": true,
+        "backdrop_path": "s1a5",
+        "genre_ids": [],
+        "id": "KEYWORD_MOVIE02",
+        "original_language": "s1a8",
+        "original_title": "s1a9",
+        "overview": "s1aa",
+        "popularity": 427,
+        "poster_path": "s1ac",
+        "release_date": "s1ad",
+        "title": "s1ae",
+        "video": false,
+        "vote_average": 432,
+        "vote_count": 433
+      }
+    }
+  },
+  "new": {
+    "keyword_movie": {
+      "keyword_movie_ref01": {
+        "adult": true,
+        "backdrop_path": "s231",
+        "genre_ids": [],
+        "original_language": "s234",
+        "original_title": "s235",
+        "overview": "s236",
+        "popularity": 567,
+        "poster_path": "s238",
+        "release_date": "s239",
+        "title": "s23a",
+        "video": false,
+        "vote_average": 572,
+        "vote_count": 573
+      }
+    }
+  },
+  "requests": {
+    "GET /3/keyword/{keyword_id}/movies": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

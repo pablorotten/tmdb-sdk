@@ -1,0 +1,27 @@
+# BasicSeasonImageFlow
+
+main: kit: flow: BasicSeasonImageFlow:
+{
+  entity: "season_image",
+  kind: "basic",
+  name: "BasicSeasonImageFlow",
+  step: [
+    {
+      m: {
+        season_number: "season_number01",
+        tv_id: "tv01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "season_image_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSeasonImageFlow"
+}

@@ -1,0 +1,148 @@
+# Entity: season_image
+
+main: kit: entity: season_image: {
+
+  alias: field: {}
+
+  fields: {
+    aspect_ratio: {
+      h: "Aspect Ratio"
+      n: "aspect_ratio"
+      r: false
+      t: "`$NUMBER`"
+    }
+    file_path: {
+      h: "File Path"
+      n: "file_path"
+      r: false
+      t: "`$STRING`"
+    }
+    height: {
+      h: "Height"
+      n: "height"
+      r: false
+      t: "`$INTEGER`"
+    }
+    iso_639_1: {
+      h: "Iso 639 1"
+      n: "iso_639_1"
+      r: false
+      t: "`$STRING`"
+    }
+    vote_average: {
+      h: "Vote Average"
+      n: "vote_average"
+      r: false
+      t: "`$NUMBER`"
+    }
+    vote_count: {
+      h: "Vote Count"
+      n: "vote_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    width: {
+      h: "Width"
+      n: "width"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "season_image"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/season/{season_number}/images"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "season_number"
+                or: "season_number"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "param"
+                n: "tv_id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "include_image_language"
+                or: "include_image_language"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/season/{season_number}/images"
+          q: {
+            exist: [
+              "season_number"
+              "tv_id"
+            ]
+          }
+          r: {
+            param: {
+              series_id: "tv_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "tv_id"
+            }
+            {
+              lit: "season"
+            }
+            {
+              var: "season_number"
+            }
+            {
+              lit: "images"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.posters`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.season")]
+  ]
+
+}

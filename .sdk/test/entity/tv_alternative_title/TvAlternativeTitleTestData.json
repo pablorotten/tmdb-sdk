@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "tv_alternative_title": {
+      "TV_ALTERNATIVE_TITLE00": {
+        "id": "TV_ALTERNATIVE_TITLE00",
+        "iso_3166_1": "s29",
+        "title": "s2a",
+        "type": "s2b"
+      },
+      "TV_ALTERNATIVE_TITLE01": {
+        "id": "TV_ALTERNATIVE_TITLE01",
+        "iso_3166_1": "s51",
+        "title": "s52",
+        "type": "s53"
+      },
+      "TV_ALTERNATIVE_TITLE02": {
+        "id": "TV_ALTERNATIVE_TITLE02",
+        "iso_3166_1": "s79",
+        "title": "s7a",
+        "type": "s7b"
+      }
+    }
+  },
+  "new": {
+    "tv_alternative_title": {
+      "tv_alternative_title_ref01": {
+        "iso_3166_1": "sa1",
+        "title": "sa2",
+        "type": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/alternative_titles": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

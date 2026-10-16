@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "company_image": {
+      "COMPANY_IMAGE00": {
+        "aspect_ratio": 80,
+        "file_path": "s51",
+        "file_type": "s52",
+        "height": 83,
+        "id": "COMPANY_IMAGE00",
+        "vote_average": 85,
+        "vote_count": 86,
+        "width": 87
+      },
+      "COMPANY_IMAGE01": {
+        "aspect_ratio": 160,
+        "file_path": "sa1",
+        "file_type": "sa2",
+        "height": 163,
+        "id": "COMPANY_IMAGE01",
+        "vote_average": 165,
+        "vote_count": 166,
+        "width": 167
+      },
+      "COMPANY_IMAGE02": {
+        "aspect_ratio": 240,
+        "file_path": "sf1",
+        "file_type": "sf2",
+        "height": 243,
+        "id": "COMPANY_IMAGE02",
+        "vote_average": 245,
+        "vote_count": 246,
+        "width": 247
+      }
+    }
+  },
+  "new": {
+    "company_image": {
+      "company_image_ref01": {
+        "aspect_ratio": 320,
+        "file_path": "s141",
+        "file_type": "s142",
+        "height": 323,
+        "vote_average": 325,
+        "vote_count": 326,
+        "width": 327
+      }
+    }
+  },
+  "requests": {
+    "GET /3/company/{company_id}/images": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "existing": {
+    "change": {
+      "CHANGE00": {
+        "adult": true,
+        "id": "CHANGE00"
+      },
+      "CHANGE01": {
+        "adult": true,
+        "id": "CHANGE01"
+      },
+      "CHANGE02": {
+        "adult": true,
+        "id": "CHANGE02"
+      }
+    }
+  },
+  "new": {
+    "change": {
+      "change_ref01": {
+        "adult": true
+      }
+    }
+  },
+  "requests": {
+    "GET /3/movie/changes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/person/changes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/tv/changes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "existing": {
+    "tv_external_id": {
+      "TV_EXTERNAL_ID00": {
+        "facebook_id": "FACEBOOK01",
+        "freebase_id": "FREEBASE01",
+        "freebase_mid": "s66",
+        "id": "TV_EXTERNAL_ID00",
+        "imdb_id": "IMDB01",
+        "instagram_id": "INSTAGRAM01",
+        "tvdb_id": "TVDB01",
+        "tvrage_id": "TVRAGE01",
+        "twitter_id": "TWITTER01",
+        "wikidata_id": "WIKIDATA01"
+      },
+      "TV_EXTERNAL_ID01": {
+        "facebook_id": "FACEBOOK01",
+        "freebase_id": "FREEBASE01",
+        "freebase_mid": "sca",
+        "id": "TV_EXTERNAL_ID01",
+        "imdb_id": "IMDB01",
+        "instagram_id": "INSTAGRAM01",
+        "tvdb_id": "TVDB01",
+        "tvrage_id": "TVRAGE01",
+        "twitter_id": "TWITTER01",
+        "wikidata_id": "WIKIDATA01"
+      },
+      "TV_EXTERNAL_ID02": {
+        "facebook_id": "FACEBOOK01",
+        "freebase_id": "FREEBASE01",
+        "freebase_mid": "s12e",
+        "id": "TV_EXTERNAL_ID02",
+        "imdb_id": "IMDB01",
+        "instagram_id": "INSTAGRAM01",
+        "tvdb_id": "TVDB01",
+        "tvrage_id": "TVRAGE01",
+        "twitter_id": "TWITTER01",
+        "wikidata_id": "WIKIDATA01"
+      }
+    }
+  },
+  "new": {
+    "tv_external_id": {
+      "tv_external_id_ref01": {
+        "facebook_id": "FACEBOOK01",
+        "freebase_id": "FREEBASE01",
+        "freebase_mid": "s192",
+        "imdb_id": "IMDB01",
+        "instagram_id": "INSTAGRAM01",
+        "tvdb_id": "TVDB01",
+        "tvrage_id": "TVRAGE01",
+        "twitter_id": "TWITTER01",
+        "wikidata_id": "WIKIDATA01"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/external_ids": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

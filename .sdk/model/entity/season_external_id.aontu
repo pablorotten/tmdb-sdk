@@ -1,0 +1,131 @@
+# Entity: season_external_id
+
+main: kit: entity: season_external_id: {
+
+  alias: field: {}
+
+  fields: {
+    freebase_id: {
+      h: "Freebase Id"
+      n: "freebase_id"
+      r: false
+      t: "`$STRING`"
+    }
+    freebase_mid: {
+      h: "Freebase Mid"
+      n: "freebase_mid"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    tvdb_id: {
+      h: "Tvdb Id"
+      n: "tvdb_id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    tvrage_id: {
+      h: "Tvrage Id"
+      n: "tvrage_id"
+      r: false
+      t: "`$STRING`"
+    }
+    wikidata_id: {
+      h: "Wikidata Id"
+      n: "wikidata_id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "season_external_id"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/season/{season_number}/external_ids"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "season_number"
+                or: "season_number"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "param"
+                n: "tv_id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/season/{season_number}/external_ids"
+          q: {
+            exist: [
+              "season_number"
+              "tv_id"
+            ]
+          }
+          r: {
+            param: {
+              series_id: "tv_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "tv_id"
+            }
+            {
+              lit: "season"
+            }
+            {
+              var: "season_number"
+            }
+            {
+              lit: "external_ids"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.season")]
+  ]
+
+}

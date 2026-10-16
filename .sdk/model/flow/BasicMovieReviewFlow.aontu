@@ -1,0 +1,26 @@
+# BasicMovieReviewFlow
+
+main: kit: flow: BasicMovieReviewFlow:
+{
+  entity: "movie_review",
+  kind: "basic",
+  name: "BasicMovieReviewFlow",
+  step: [
+    {
+      m: {
+        movie_id: "movie01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "movie_review_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieReviewFlow"
+}

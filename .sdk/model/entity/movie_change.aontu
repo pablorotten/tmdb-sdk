@@ -1,0 +1,120 @@
+# Entity: movie_change
+
+main: kit: entity: movie_change: {
+
+  alias: field: {}
+
+  fields: {
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    items: {
+      h: "Items"
+      n: "items"
+      r: false
+      t: "`$ARRAY`"
+    }
+    key: {
+      h: "Key"
+      n: "key"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "movie_change"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/movie/{movie_id}/changes"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "movie_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "end_date"
+                or: "end_date"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "start_date"
+                or: "start_date"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/movie/{movie_id}/changes"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              movie_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "movie"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "changes"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.changes`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

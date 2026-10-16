@@ -1,0 +1,61 @@
+{
+  "existing": {
+    "company": {
+      "COMPANY00": {
+        "description": "s50",
+        "headquarters": "s51",
+        "homepage": "s52",
+        "id": "COMPANY00",
+        "logo_path": "s54",
+        "name": "s55",
+        "origin_country": "s56",
+        "parent_company": "s57"
+      },
+      "COMPANY01": {
+        "description": "sa0",
+        "headquarters": "sa1",
+        "homepage": "sa2",
+        "id": "COMPANY01",
+        "logo_path": "sa4",
+        "name": "sa5",
+        "origin_country": "sa6",
+        "parent_company": "sa7"
+      },
+      "COMPANY02": {
+        "description": "sf0",
+        "headquarters": "sf1",
+        "homepage": "sf2",
+        "id": "COMPANY02",
+        "logo_path": "sf4",
+        "name": "sf5",
+        "origin_country": "sf6",
+        "parent_company": "sf7"
+      }
+    }
+  },
+  "new": {
+    "company": {
+      "company_ref01": {
+        "description": "s140",
+        "headquarters": "s141",
+        "homepage": "s142",
+        "logo_path": "s144",
+        "name": "s145",
+        "origin_country": "s146",
+        "parent_company": "s147"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/search/company": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/company/{company_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

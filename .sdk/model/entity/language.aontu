@@ -1,0 +1,67 @@
+# Entity: language
+
+main: kit: entity: language: {
+
+  alias: field: {}
+
+  fields: {
+    english_name: {
+      h: "English Name"
+      n: "english_name"
+      r: false
+      t: "`$STRING`"
+    }
+    iso_639_1: {
+      h: "Iso 639 1"
+      n: "iso_639_1"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "language"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/configuration/languages"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/configuration/languages"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "configuration"
+            }
+            {
+              lit: "languages"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

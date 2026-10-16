@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "movie_keyword": {
+      "MOVIE_KEYWORD00": {
+        "id": "MOVIE_KEYWORD00",
+        "name": "s15"
+      },
+      "MOVIE_KEYWORD01": {
+        "id": "MOVIE_KEYWORD01",
+        "name": "s29"
+      },
+      "MOVIE_KEYWORD02": {
+        "id": "MOVIE_KEYWORD02",
+        "name": "s3d"
+      }
+    }
+  },
+  "new": {
+    "movie_keyword": {
+      "movie_keyword_ref01": {
+        "name": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/movie/{movie_id}/keywords": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

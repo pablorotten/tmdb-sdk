@@ -1,0 +1,26 @@
+# BasicCollectionTranslationFlow
+
+main: kit: flow: BasicCollectionTranslationFlow:
+{
+  entity: "collection_translation",
+  kind: "basic",
+  name: "BasicCollectionTranslationFlow",
+  step: [
+    {
+      m: {
+        collection_id: "collection01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "collection_translation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCollectionTranslationFlow"
+}

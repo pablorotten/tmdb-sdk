@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "account_list": {
+      "ACCOUNT_LIST00": {
+        "description": "s50",
+        "favorite_count": 81,
+        "id": "ACCOUNT_LIST00",
+        "iso_639_1": "s53",
+        "item_count": 84,
+        "list_type": "s55",
+        "name": "s56",
+        "poster_path": "s57"
+      },
+      "ACCOUNT_LIST01": {
+        "description": "sa0",
+        "favorite_count": 161,
+        "id": "ACCOUNT_LIST01",
+        "iso_639_1": "sa3",
+        "item_count": 164,
+        "list_type": "sa5",
+        "name": "sa6",
+        "poster_path": "sa7"
+      },
+      "ACCOUNT_LIST02": {
+        "description": "sf0",
+        "favorite_count": 241,
+        "id": "ACCOUNT_LIST02",
+        "iso_639_1": "sf3",
+        "item_count": 244,
+        "list_type": "sf5",
+        "name": "sf6",
+        "poster_path": "sf7"
+      }
+    }
+  },
+  "new": {
+    "account_list": {
+      "account_list_ref01": {
+        "description": "s140",
+        "favorite_count": 321,
+        "iso_639_1": "s143",
+        "item_count": 324,
+        "list_type": "s145",
+        "name": "s146",
+        "poster_path": "s147"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/account/{account_id}/lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

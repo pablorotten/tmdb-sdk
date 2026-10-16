@@ -1,0 +1,26 @@
+# BasicTvCreditFlow
+
+main: kit: flow: BasicTvCreditFlow:
+{
+  entity: "tv_credit",
+  kind: "basic",
+  name: "BasicTvCreditFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_credit_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvCreditFlow"
+}

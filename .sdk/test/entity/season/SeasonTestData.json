@@ -1,0 +1,63 @@
+{
+  "existing": {
+    "season": {
+      "SEASON00": {
+        "air_date": "s5a",
+        "episodes": [],
+        "id": "SEASON00",
+        "name": "s5d",
+        "networks": [],
+        "overview": "s5f",
+        "poster_path": "s60",
+        "season_number": 97,
+        "vote_average": 98,
+        "tv_id": "TV01"
+      },
+      "SEASON01": {
+        "air_date": "sb4",
+        "episodes": [],
+        "id": "SEASON01",
+        "name": "sb7",
+        "networks": [],
+        "overview": "sb9",
+        "poster_path": "sba",
+        "season_number": 187,
+        "vote_average": 188,
+        "tv_id": "TV01"
+      },
+      "SEASON02": {
+        "air_date": "s10e",
+        "episodes": [],
+        "id": "SEASON02",
+        "name": "s111",
+        "networks": [],
+        "overview": "s113",
+        "poster_path": "s114",
+        "season_number": 277,
+        "vote_average": 278,
+        "tv_id": "TV01"
+      }
+    }
+  },
+  "new": {
+    "season": {
+      "season_ref01": {
+        "air_date": "s168",
+        "episodes": [],
+        "name": "s16b",
+        "networks": [],
+        "overview": "s16d",
+        "poster_path": "s16e",
+        "season_number": 367,
+        "vote_average": 368
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/season/{season_number}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

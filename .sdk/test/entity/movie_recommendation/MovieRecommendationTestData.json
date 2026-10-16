@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "movie_recommendation": {
+      "MOVIE_RECOMMENDATION00": {
+        "id": "MOVIE_RECOMMENDATION00"
+      },
+      "MOVIE_RECOMMENDATION01": {
+        "id": "MOVIE_RECOMMENDATION01"
+      },
+      "MOVIE_RECOMMENDATION02": {
+        "id": "MOVIE_RECOMMENDATION02"
+      }
+    }
+  },
+  "new": {
+    "movie_recommendation": {
+      "movie_recommendation_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /3/movie/{movie_id}/recommendations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

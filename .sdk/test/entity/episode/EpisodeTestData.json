@@ -1,0 +1,116 @@
+{
+  "existing": {
+    "episode": {
+      "EPISODE00": {
+        "air_date": "s96",
+        "crew": [],
+        "episode_number": 152,
+        "guest_stars": [],
+        "id": "EPISODE00",
+        "name": "s9b",
+        "overview": "s9c",
+        "production_code": "s9d",
+        "rating": 158,
+        "runtime": 159,
+        "season_number": 160,
+        "show_id": "SHOW01",
+        "still_path": "sa2",
+        "vote_average": 163,
+        "vote_count": 164,
+        "season_id": "SEASON01",
+        "tv_id": "TV01",
+        "account_id": "ACCOUNT01",
+        "guest_session_id": "GUEST_SESSION01"
+      },
+      "EPISODE01": {
+        "air_date": "s12c",
+        "crew": [],
+        "episode_number": 302,
+        "guest_stars": [],
+        "id": "EPISODE01",
+        "name": "s131",
+        "overview": "s132",
+        "production_code": "s133",
+        "rating": 308,
+        "runtime": 309,
+        "season_number": 310,
+        "show_id": "SHOW01",
+        "still_path": "s138",
+        "vote_average": 313,
+        "vote_count": 314,
+        "season_id": "SEASON01",
+        "tv_id": "TV01",
+        "account_id": "ACCOUNT01",
+        "guest_session_id": "GUEST_SESSION01"
+      },
+      "EPISODE02": {
+        "air_date": "s1c2",
+        "crew": [],
+        "episode_number": 452,
+        "guest_stars": [],
+        "id": "EPISODE02",
+        "name": "s1c7",
+        "overview": "s1c8",
+        "production_code": "s1c9",
+        "rating": 458,
+        "runtime": 459,
+        "season_number": 460,
+        "show_id": "SHOW01",
+        "still_path": "s1ce",
+        "vote_average": 463,
+        "vote_count": 464,
+        "season_id": "SEASON01",
+        "tv_id": "TV01",
+        "account_id": "ACCOUNT01",
+        "guest_session_id": "GUEST_SESSION01"
+      }
+    }
+  },
+  "new": {
+    "episode": {
+      "episode_ref01": {
+        "air_date": "s258",
+        "crew": [],
+        "episode_number": 602,
+        "guest_stars": [],
+        "name": "s25d",
+        "overview": "s25e",
+        "production_code": "s25f",
+        "rating": 608,
+        "runtime": 609,
+        "season_number": 610,
+        "show_id": "SHOW01",
+        "still_path": "s264",
+        "vote_average": 613,
+        "vote_count": 614
+      }
+    }
+  },
+  "requests": {
+    "POST /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/rating": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/account/{account_id}/rated/tv/episodes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/guest_session/{guest_session_id}/rated/tv/episodes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/tv/{series_id}/season/{season_number}/episode/{episode_number}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/rating": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

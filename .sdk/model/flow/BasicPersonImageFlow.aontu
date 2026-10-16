@@ -1,0 +1,26 @@
+# BasicPersonImageFlow
+
+main: kit: flow: BasicPersonImageFlow:
+{
+  entity: "person_image",
+  kind: "basic",
+  name: "BasicPersonImageFlow",
+  step: [
+    {
+      m: {
+        person_id: "person01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "person_image_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPersonImageFlow"
+}

@@ -1,0 +1,26 @@
+# BasicTvImageFlow
+
+main: kit: flow: BasicTvImageFlow:
+{
+  entity: "tv_image",
+  kind: "basic",
+  name: "BasicTvImageFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_image_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvImageFlow"
+}

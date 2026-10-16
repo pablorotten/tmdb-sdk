@@ -1,0 +1,65 @@
+{
+  "existing": {
+    "collection": {
+      "COLLECTION00": {
+        "adult": true,
+        "backdrop_path": "s5b",
+        "id": "COLLECTION00",
+        "name": "s5d",
+        "original_language": "s5e",
+        "original_name": "s5f",
+        "overview": "s60",
+        "parts": [],
+        "poster_path": "s62"
+      },
+      "COLLECTION01": {
+        "adult": true,
+        "backdrop_path": "sb5",
+        "id": "COLLECTION01",
+        "name": "sb7",
+        "original_language": "sb8",
+        "original_name": "sb9",
+        "overview": "sba",
+        "parts": [],
+        "poster_path": "sbc"
+      },
+      "COLLECTION02": {
+        "adult": true,
+        "backdrop_path": "s10f",
+        "id": "COLLECTION02",
+        "name": "s111",
+        "original_language": "s112",
+        "original_name": "s113",
+        "overview": "s114",
+        "parts": [],
+        "poster_path": "s116"
+      }
+    }
+  },
+  "new": {
+    "collection": {
+      "collection_ref01": {
+        "adult": true,
+        "backdrop_path": "s169",
+        "name": "s16b",
+        "original_language": "s16c",
+        "original_name": "s16d",
+        "overview": "s16e",
+        "parts": [],
+        "poster_path": "s170"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/search/collection": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/collection/{collection_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

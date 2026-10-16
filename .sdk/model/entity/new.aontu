@@ -1,0 +1,159 @@
+# Entity: new
+
+main: kit: entity: new: {
+
+  alias: field: {}
+
+  fields: {
+    RAW_BODY: {
+      fo: "json"
+      h: "Raw Body"
+      n: "RAW_BODY"
+      r: true
+      t: "`$STRING`"
+    }
+    expires_at: {
+      h: "Expires At"
+      n: "expires_at"
+      r: false
+      t: "`$STRING`"
+    }
+    guest_session_id: {
+      h: "Guest Session Id"
+      n: "guest_session_id"
+      r: false
+      t: "`$STRING`"
+    }
+    request_token: {
+      h: "Request Token"
+      n: "request_token"
+      r: false
+      t: "`$STRING`"
+    }
+    session_id: {
+      h: "Session Id"
+      n: "session_id"
+      r: false
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "new"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "RAW_BODY"
+          ]
+          co: {
+            id: "POST /3/authentication/session/new"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/3/authentication/session/new"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "session"
+            }
+            {
+              lit: "new"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/authentication/guest_session/new"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/authentication/guest_session/new"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "guest_session"
+            }
+            {
+              lit: "new"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /3/authentication/token/new"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/authentication/token/new"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "token"
+            }
+            {
+              lit: "new"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

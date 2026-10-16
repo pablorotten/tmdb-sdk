@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "network_alternative_name": {
+      "NETWORK_ALTERNATIVE_NAME00": {
+        "id": "NETWORK_ALTERNATIVE_NAME00",
+        "name": "s1f",
+        "type": "s20"
+      },
+      "NETWORK_ALTERNATIVE_NAME01": {
+        "id": "NETWORK_ALTERNATIVE_NAME01",
+        "name": "s3d",
+        "type": "s3e"
+      },
+      "NETWORK_ALTERNATIVE_NAME02": {
+        "id": "NETWORK_ALTERNATIVE_NAME02",
+        "name": "s5b",
+        "type": "s5c"
+      }
+    }
+  },
+  "new": {
+    "network_alternative_name": {
+      "network_alternative_name_ref01": {
+        "name": "s79",
+        "type": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/network/{network_id}/alternative_names": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

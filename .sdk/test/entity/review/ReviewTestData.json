@@ -1,0 +1,68 @@
+{
+  "existing": {
+    "review": {
+      "REVIEW00": {
+        "author": "s6e",
+        "author_details": {},
+        "content": "s70",
+        "created_at": "s71",
+        "id": "REVIEW00",
+        "iso_639_1": "s73",
+        "media_id": "MEDIA01",
+        "media_title": "s75",
+        "media_type": "s76",
+        "updated_at": "s77",
+        "url": "s78"
+      },
+      "REVIEW01": {
+        "author": "sdc",
+        "author_details": {},
+        "content": "sde",
+        "created_at": "sdf",
+        "id": "REVIEW01",
+        "iso_639_1": "se1",
+        "media_id": "MEDIA01",
+        "media_title": "se3",
+        "media_type": "se4",
+        "updated_at": "se5",
+        "url": "se6"
+      },
+      "REVIEW02": {
+        "author": "s14a",
+        "author_details": {},
+        "content": "s14c",
+        "created_at": "s14d",
+        "id": "REVIEW02",
+        "iso_639_1": "s14f",
+        "media_id": "MEDIA01",
+        "media_title": "s151",
+        "media_type": "s152",
+        "updated_at": "s153",
+        "url": "s154"
+      }
+    }
+  },
+  "new": {
+    "review": {
+      "review_ref01": {
+        "author": "s1b8",
+        "author_details": {},
+        "content": "s1ba",
+        "created_at": "s1bb",
+        "iso_639_1": "s1bd",
+        "media_id": "MEDIA01",
+        "media_title": "s1bf",
+        "media_type": "s1c0",
+        "updated_at": "s1c1",
+        "url": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/review/{review_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+# Entity: session
+
+main: kit: entity: session: {
+
+  alias: field: {}
+
+  name: "session"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          bf: [
+            "RAW_BODY"
+          ]
+          co: {
+            id: "DELETE /3/authentication/session"
+            source: "openapi3"
+            version: 2
+          }
+          m: "DELETE"
+          o: "/3/authentication/session"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "session"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

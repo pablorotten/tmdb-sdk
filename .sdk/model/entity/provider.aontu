@@ -1,0 +1,227 @@
+# Entity: provider
+
+main: kit: entity: provider: {
+
+  alias: field: {}
+
+  fields: {
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    results: {
+      h: "Results"
+      n: "results"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "provider"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/season/{season_number}/watch/providers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "season_id"
+                or: "season_number"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "param"
+                n: "tv_id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/season/{season_number}/watch/providers"
+          q: {
+            exist: [
+              "season_id"
+              "tv_id"
+            ]
+          }
+          r: {
+            param: {
+              season_number: "season_id"
+              series_id: "tv_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "tv_id"
+            }
+            {
+              lit: "season"
+            }
+            {
+              var: "season_id"
+            }
+            {
+              lit: "watch"
+            }
+            {
+              lit: "providers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /3/movie/{movie_id}/watch/providers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "movie_id"
+                or: "movie_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/movie/{movie_id}/watch/providers"
+          q: {
+            exist: [
+              "movie_id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "movie"
+            }
+            {
+              var: "movie_id"
+            }
+            {
+              lit: "watch"
+            }
+            {
+              lit: "providers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/watch/providers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "tv_id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/watch/providers"
+          q: {
+            exist: [
+              "tv_id"
+            ]
+          }
+          r: {
+            param: {
+              series_id: "tv_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "tv_id"
+            }
+            {
+              lit: "watch"
+            }
+            {
+              lit: "providers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.movie")]
+    [path("$.main.kit.entity.season")]
+  ]
+
+}

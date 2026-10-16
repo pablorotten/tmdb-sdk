@@ -1,0 +1,120 @@
+# Entity: tv_episode_group
+
+main: kit: entity: tv_episode_group: {
+
+  alias: field: {}
+
+  fields: {
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    episode_count: {
+      h: "Episode Count"
+      n: "episode_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    group_count: {
+      h: "Group Count"
+      n: "group_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    network: {
+      h: "Network"
+      n: "network"
+      r: false
+      t: "`$OBJECT`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "tv_episode_group"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/episode_groups"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/episode_groups"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              series_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "episode_groups"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

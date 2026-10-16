@@ -1,0 +1,26 @@
+# BasicTvAlternativeTitleFlow
+
+main: kit: flow: BasicTvAlternativeTitleFlow:
+{
+  entity: "tv_alternative_title",
+  kind: "basic",
+  name: "BasicTvAlternativeTitleFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_alternative_title_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvAlternativeTitleFlow"
+}

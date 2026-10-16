@@ -1,0 +1,22 @@
+# BasicUpcomingFlow
+
+main: kit: flow: BasicUpcomingFlow:
+{
+  entity: "upcoming",
+  kind: "basic",
+  name: "BasicUpcomingFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "upcoming_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUpcomingFlow"
+}

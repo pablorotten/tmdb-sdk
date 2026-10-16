@@ -1,0 +1,79 @@
+# Entity: country
+
+main: kit: entity: country: {
+
+  alias: field: {}
+
+  fields: {
+    english_name: {
+      h: "English Name"
+      n: "english_name"
+      r: false
+      t: "`$STRING`"
+    }
+    iso_3166_1: {
+      h: "Iso 3166 1"
+      n: "iso_3166_1"
+      r: false
+      t: "`$STRING`"
+    }
+    native_name: {
+      h: "Native Name"
+      n: "native_name"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "country"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/configuration/countries"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/configuration/countries"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "configuration"
+            }
+            {
+              lit: "countries"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

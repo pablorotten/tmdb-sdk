@@ -1,0 +1,144 @@
+# Entity: account_list
+
+main: kit: entity: account_list: {
+
+  alias: field: {}
+
+  fields: {
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    favorite_count: {
+      h: "Favorite Count"
+      n: "favorite_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    iso_639_1: {
+      h: "Iso 639 1"
+      n: "iso_639_1"
+      r: false
+      t: "`$STRING`"
+    }
+    item_count: {
+      h: "Item Count"
+      n: "item_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    list_type: {
+      h: "List Type"
+      n: "list_type"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    poster_path: {
+      h: "Poster Path"
+      n: "poster_path"
+      r: false
+      t: "`$ANY`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "account_list"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/account/{account_id}/lists"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: null
+                k: "param"
+                n: "id"
+                or: "account_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/account/{account_id}/lists"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              account_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "account"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "lists"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

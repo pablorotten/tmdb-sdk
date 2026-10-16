@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "tv_account_state": {
+      "TV_ACCOUNT_STATE00": {
+        "favorite": true,
+        "id": "TV_ACCOUNT_STATE00",
+        "rated": {},
+        "watchlist": false
+      },
+      "TV_ACCOUNT_STATE01": {
+        "favorite": true,
+        "id": "TV_ACCOUNT_STATE01",
+        "rated": {},
+        "watchlist": false
+      },
+      "TV_ACCOUNT_STATE02": {
+        "favorite": true,
+        "id": "TV_ACCOUNT_STATE02",
+        "rated": {},
+        "watchlist": false
+      }
+    }
+  },
+  "new": {
+    "tv_account_state": {
+      "tv_account_state_ref01": {
+        "favorite": true,
+        "rated": {},
+        "watchlist": false
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/account_states": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

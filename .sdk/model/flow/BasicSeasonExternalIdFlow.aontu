@@ -1,0 +1,33 @@
+# BasicSeasonExternalIdFlow
+
+main: kit: flow: BasicSeasonExternalIdFlow:
+{
+  entity: "season_external_id",
+  kind: "basic",
+  name: "BasicSeasonExternalIdFlow",
+  step: [
+    {
+      i: {
+        ref: "season_external_id_ref01",
+        srcdatavar: "season_external_id_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "season_external_id01",
+        tv_id: "tv01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-season_external_id_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSeasonExternalIdFlow"
+}

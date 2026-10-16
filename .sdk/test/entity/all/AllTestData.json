@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "all": {
+      "ALL00": {
+        "id": "ALL00",
+        "page": 51,
+        "results": [],
+        "total_pages": 53,
+        "total_results": 54
+      },
+      "ALL01": {
+        "id": "ALL01",
+        "page": 101,
+        "results": [],
+        "total_pages": 103,
+        "total_results": 104
+      },
+      "ALL02": {
+        "id": "ALL02",
+        "page": 151,
+        "results": [],
+        "total_pages": 153,
+        "total_results": 154
+      }
+    }
+  },
+  "new": {
+    "all": {
+      "all_ref01": {
+        "page": 201,
+        "results": [],
+        "total_pages": 203,
+        "total_results": 204
+      }
+    }
+  },
+  "requests": {
+    "GET /3/trending/all/{time_window}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

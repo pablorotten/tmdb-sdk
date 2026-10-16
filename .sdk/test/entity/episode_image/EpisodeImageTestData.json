@@ -1,0 +1,62 @@
+{
+  "existing": {
+    "episode_image": {
+      "EPISODE_IMAGE00": {
+        "aspect_ratio": 70,
+        "file_path": "s47",
+        "height": 72,
+        "iso_639_1": "s49",
+        "vote_average": 74,
+        "vote_count": 75,
+        "width": 76,
+        "episode_number": "EPISODE_NUMBER01",
+        "season_id": "SEASON01",
+        "tv_id": "TV01"
+      },
+      "EPISODE_IMAGE01": {
+        "aspect_ratio": 140,
+        "file_path": "s8d",
+        "height": 142,
+        "iso_639_1": "s8f",
+        "vote_average": 144,
+        "vote_count": 145,
+        "width": 146,
+        "episode_number": "EPISODE_NUMBER01",
+        "season_id": "SEASON01",
+        "tv_id": "TV01"
+      },
+      "EPISODE_IMAGE02": {
+        "aspect_ratio": 210,
+        "file_path": "sd3",
+        "height": 212,
+        "iso_639_1": "sd5",
+        "vote_average": 214,
+        "vote_count": 215,
+        "width": 216,
+        "episode_number": "EPISODE_NUMBER01",
+        "season_id": "SEASON01",
+        "tv_id": "TV01"
+      }
+    }
+  },
+  "new": {
+    "episode_image": {
+      "episode_image_ref01": {
+        "aspect_ratio": 280,
+        "file_path": "s119",
+        "height": 282,
+        "iso_639_1": "s11b",
+        "vote_average": 284,
+        "vote_count": 285,
+        "width": 286
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/images": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

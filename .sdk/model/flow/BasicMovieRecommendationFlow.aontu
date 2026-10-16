@@ -1,0 +1,32 @@
+# BasicMovieRecommendationFlow
+
+main: kit: flow: BasicMovieRecommendationFlow:
+{
+  entity: "movie_recommendation",
+  kind: "basic",
+  name: "BasicMovieRecommendationFlow",
+  step: [
+    {
+      i: {
+        ref: "movie_recommendation_ref01",
+        srcdatavar: "movie_recommendation_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "movie_recommendation01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-movie_recommendation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieRecommendationFlow"
+}

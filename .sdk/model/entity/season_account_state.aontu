@@ -1,0 +1,129 @@
+# Entity: season_account_state
+
+main: kit: entity: season_account_state: {
+
+  alias: field: {}
+
+  fields: {
+    episode_number: {
+      h: "Episode Number"
+      n: "episode_number"
+      r: false
+      t: "`$INTEGER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    rated: {
+      h: "Rated"
+      n: "rated"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "season_account_state"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/season/{season_number}/account_states"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "season_number"
+                or: "season_number"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "param"
+                n: "tv_id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "guest_session_id"
+                or: "guest_session_id"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/season/{season_number}/account_states"
+          q: {
+            exist: [
+              "season_number"
+              "tv_id"
+            ]
+          }
+          r: {
+            param: {
+              series_id: "tv_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "tv_id"
+            }
+            {
+              lit: "season"
+            }
+            {
+              var: "season_number"
+            }
+            {
+              lit: "account_states"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.season")]
+  ]
+
+}

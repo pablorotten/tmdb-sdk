@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "watchlist": {
+      "WATCHLIST00": {
+        "RAW_BODY": "s1e",
+        "status_code": 31,
+        "status_message": "s20",
+        "account_id": "ACCOUNT01",
+        "id": "WATCHLIST00"
+      },
+      "WATCHLIST01": {
+        "RAW_BODY": "s3c",
+        "status_code": 61,
+        "status_message": "s3e",
+        "account_id": "ACCOUNT01",
+        "id": "WATCHLIST01"
+      },
+      "WATCHLIST02": {
+        "RAW_BODY": "s5a",
+        "status_code": 91,
+        "status_message": "s5c",
+        "account_id": "ACCOUNT01",
+        "id": "WATCHLIST02"
+      }
+    }
+  },
+  "new": {
+    "watchlist": {
+      "watchlist_ref01": {
+        "RAW_BODY": "s78",
+        "status_code": 121,
+        "status_message": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "POST /3/account/{account_id}/watchlist": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# BasicEpisodeChangeFlow
+
+main: kit: flow: BasicEpisodeChangeFlow:
+{
+  entity: "episode_change",
+  kind: "basic",
+  name: "BasicEpisodeChangeFlow",
+  step: [
+    {
+      m: {
+        episode_id: "episode01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "episode_change_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEpisodeChangeFlow"
+}

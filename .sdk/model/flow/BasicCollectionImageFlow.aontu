@@ -1,0 +1,26 @@
+# BasicCollectionImageFlow
+
+main: kit: flow: BasicCollectionImageFlow:
+{
+  entity: "collection_image",
+  kind: "basic",
+  name: "BasicCollectionImageFlow",
+  step: [
+    {
+      m: {
+        collection_id: "collection01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "collection_image_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCollectionImageFlow"
+}

@@ -1,0 +1,37 @@
+{
+  "existing": {
+    "language": {
+      "LANGUAGE00": {
+        "english_name": "s1e",
+        "iso_639_1": "s1f",
+        "name": "s20"
+      },
+      "LANGUAGE01": {
+        "english_name": "s3c",
+        "iso_639_1": "s3d",
+        "name": "s3e"
+      },
+      "LANGUAGE02": {
+        "english_name": "s5a",
+        "iso_639_1": "s5b",
+        "name": "s5c"
+      }
+    }
+  },
+  "new": {
+    "language": {
+      "language_ref01": {
+        "english_name": "s78",
+        "iso_639_1": "s79",
+        "name": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/configuration/languages": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

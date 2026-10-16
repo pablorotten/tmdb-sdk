@@ -1,0 +1,54 @@
+{
+  "existing": {
+    "episode_translation": {
+      "EPISODE_TRANSLATION00": {
+        "data": {},
+        "english_name": "s33",
+        "iso_3166_1": "s34",
+        "iso_639_1": "s35",
+        "name": "s36",
+        "episode_number": "EPISODE_NUMBER01",
+        "season_id": "SEASON01",
+        "tv_id": "TV01"
+      },
+      "EPISODE_TRANSLATION01": {
+        "data": {},
+        "english_name": "s65",
+        "iso_3166_1": "s66",
+        "iso_639_1": "s67",
+        "name": "s68",
+        "episode_number": "EPISODE_NUMBER01",
+        "season_id": "SEASON01",
+        "tv_id": "TV01"
+      },
+      "EPISODE_TRANSLATION02": {
+        "data": {},
+        "english_name": "s97",
+        "iso_3166_1": "s98",
+        "iso_639_1": "s99",
+        "name": "s9a",
+        "episode_number": "EPISODE_NUMBER01",
+        "season_id": "SEASON01",
+        "tv_id": "TV01"
+      }
+    }
+  },
+  "new": {
+    "episode_translation": {
+      "episode_translation_ref01": {
+        "data": {},
+        "english_name": "sc9",
+        "iso_3166_1": "sca",
+        "iso_639_1": "scb",
+        "name": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/translations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

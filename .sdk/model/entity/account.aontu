@@ -1,0 +1,127 @@
+# Entity: account
+
+main: kit: entity: account: {
+
+  alias: field: {}
+
+  fields: {
+    avatar: {
+      h: "Avatar"
+      n: "avatar"
+      r: false
+      t: "`$OBJECT`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    include_adult: {
+      h: "Include Adult"
+      n: "include_adult"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    iso_3166_1: {
+      h: "Iso 3166 1"
+      n: "iso_3166_1"
+      r: false
+      t: "`$STRING`"
+    }
+    iso_639_1: {
+      h: "Iso 639 1"
+      n: "iso_639_1"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    username: {
+      h: "Username"
+      n: "username"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "account"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/account/{account_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: null
+                k: "param"
+                n: "id"
+                or: "account_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/account/{account_id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              account_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "account"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

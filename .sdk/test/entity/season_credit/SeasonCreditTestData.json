@@ -1,0 +1,42 @@
+{
+  "existing": {
+    "season_credit": {
+      "SEASON_CREDIT00": {
+        "cast": [],
+        "crew": [],
+        "id": "SEASON_CREDIT00",
+        "season_number": "SEASON_NUMBER01",
+        "tv_id": "TV01"
+      },
+      "SEASON_CREDIT01": {
+        "cast": [],
+        "crew": [],
+        "id": "SEASON_CREDIT01",
+        "season_number": "SEASON_NUMBER01",
+        "tv_id": "TV01"
+      },
+      "SEASON_CREDIT02": {
+        "cast": [],
+        "crew": [],
+        "id": "SEASON_CREDIT02",
+        "season_number": "SEASON_NUMBER01",
+        "tv_id": "TV01"
+      }
+    }
+  },
+  "new": {
+    "season_credit": {
+      "season_credit_ref01": {
+        "cast": [],
+        "crew": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/season/{season_number}/credits": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

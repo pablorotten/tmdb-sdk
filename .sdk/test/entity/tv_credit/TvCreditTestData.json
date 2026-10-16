@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "tv_credit": {
+      "TV_CREDIT00": {
+        "cast": [],
+        "crew": [],
+        "id": "TV_CREDIT00"
+      },
+      "TV_CREDIT01": {
+        "cast": [],
+        "crew": [],
+        "id": "TV_CREDIT01"
+      },
+      "TV_CREDIT02": {
+        "cast": [],
+        "crew": [],
+        "id": "TV_CREDIT02"
+      }
+    }
+  },
+  "new": {
+    "tv_credit": {
+      "tv_credit_ref01": {
+        "cast": [],
+        "crew": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/credits": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

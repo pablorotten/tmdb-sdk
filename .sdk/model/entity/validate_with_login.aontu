@@ -1,0 +1,80 @@
+# Entity: validate_with_login
+
+main: kit: entity: validate_with_login: {
+
+  alias: field: {}
+
+  fields: {
+    RAW_BODY: {
+      fo: "json"
+      h: "Raw Body"
+      n: "RAW_BODY"
+      r: true
+      t: "`$STRING`"
+    }
+    expires_at: {
+      h: "Expires At"
+      n: "expires_at"
+      r: false
+      t: "`$STRING`"
+    }
+    request_token: {
+      h: "Request Token"
+      n: "request_token"
+      r: false
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "validate_with_login"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "RAW_BODY"
+          ]
+          co: {
+            id: "POST /3/authentication/token/validate_with_login"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/3/authentication/token/validate_with_login"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "token"
+            }
+            {
+              lit: "validate_with_login"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

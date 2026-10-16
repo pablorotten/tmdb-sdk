@@ -1,0 +1,172 @@
+{
+  point: "warning"
+  note: "Points GET /3/movie/changes, GET /3/person/changes and GET /3/tv/changes on entity=change op=list have the same selector (exist: none), so only GET /3/movie/changes is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "change"
+  op: "list"
+  points: [
+    "GET /3/movie/changes"
+    "GET /3/person/changes"
+    "GET /3/tv/changes"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/movie/latest, GET /3/person/latest and GET /3/tv/latest on entity=latest op=list have the same selector (exist: none), so only GET /3/movie/latest is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "latest"
+  op: "list"
+  points: [
+    "GET /3/movie/latest"
+    "GET /3/person/latest"
+    "GET /3/tv/latest"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/genre/movie/list and GET /3/genre/tv/list on entity=list op=list have the same selector (exist: none), so only GET /3/genre/movie/list is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "list"
+  op: "list"
+  points: [
+    "GET /3/genre/movie/list"
+    "GET /3/genre/tv/list"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/certification/movie/list and GET /3/certification/tv/list on entity=list op=load have the same selector (exist: none), so only GET /3/certification/movie/list is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "list"
+  op: "load"
+  points: [
+    "GET /3/certification/movie/list"
+    "GET /3/certification/tv/list"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/account/{account_id}/favorite/movies, GET /3/account/{account_id}/rated/movies and GET /3/account/{account_id}/watchlist/movies on entity=movie op=list have the same selector (exist: account_id), so only GET /3/account/{account_id}/favorite/movies is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "movie"
+  op: "list"
+  points: [
+    "GET /3/account/{account_id}/favorite/movies"
+    "GET /3/account/{account_id}/rated/movies"
+    "GET /3/account/{account_id}/watchlist/movies"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/discover/movie and GET /3/watch/providers/movie on entity=movie op=list have the same selector (exist: none), so only GET /3/discover/movie is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "movie"
+  op: "list"
+  points: [
+    "GET /3/discover/movie"
+    "GET /3/watch/providers/movie"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/movie/{movie_id} and GET /3/trending/movie/{time_window} on entity=movie op=load have the same selector (exist: id), so only GET /3/movie/{movie_id} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "movie"
+  op: "load"
+  points: [
+    "GET /3/movie/{movie_id}"
+    "GET /3/trending/movie/{time_window}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/authentication/guest_session/new and GET /3/authentication/token/new on entity=new op=load have the same selector (exist: none), so only GET /3/authentication/guest_session/new is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "new"
+  op: "load"
+  points: [
+    "GET /3/authentication/guest_session/new"
+    "GET /3/authentication/token/new"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/person/{person_id} and GET /3/trending/person/{time_window} on entity=person op=load have the same selector (exist: id), so only GET /3/person/{person_id} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "person"
+  op: "load"
+  points: [
+    "GET /3/person/{person_id}"
+    "GET /3/trending/person/{time_window}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/movie/popular, GET /3/person/popular and GET /3/tv/popular on entity=popular op=list have the same selector (exist: none), so only GET /3/movie/popular is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "popular"
+  op: "list"
+  points: [
+    "GET /3/movie/popular"
+    "GET /3/person/popular"
+    "GET /3/tv/popular"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/movie/top_rated and GET /3/tv/top_rated on entity=top_rated op=list have the same selector (exist: none), so only GET /3/movie/top_rated is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "top_rated"
+  op: "list"
+  points: [
+    "GET /3/movie/top_rated"
+    "GET /3/tv/top_rated"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/account/{account_id}/favorite/tv, GET /3/account/{account_id}/rated/tv and GET /3/account/{account_id}/watchlist/tv on entity=tvn op=list have the same selector (exist: account_id), so only GET /3/account/{account_id}/favorite/tv is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "tvn"
+  op: "list"
+  points: [
+    "GET /3/account/{account_id}/favorite/tv"
+    "GET /3/account/{account_id}/rated/tv"
+    "GET /3/account/{account_id}/watchlist/tv"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /3/discover/tv and GET /3/watch/providers/tv on entity=tvn op=list have the same selector (exist: none), so only GET /3/discover/tv is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "tvn"
+  op: "list"
+  points: [
+    "GET /3/discover/tv"
+    "GET /3/watch/providers/tv"
+  ]
+
+}

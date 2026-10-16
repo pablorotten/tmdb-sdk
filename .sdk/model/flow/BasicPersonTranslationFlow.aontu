@@ -1,0 +1,26 @@
+# BasicPersonTranslationFlow
+
+main: kit: flow: BasicPersonTranslationFlow:
+{
+  entity: "person_translation",
+  kind: "basic",
+  name: "BasicPersonTranslationFlow",
+  step: [
+    {
+      m: {
+        person_id: "person01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "person_translation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPersonTranslationFlow"
+}

@@ -1,0 +1,18 @@
+# BasicValidateWithLoginFlow
+
+main: kit: flow: BasicValidateWithLoginFlow:
+{
+  entity: "validate_with_login",
+  kind: "basic",
+  name: "BasicValidateWithLoginFlow",
+  step: [
+    {
+      i: {
+        ref: "validate_with_login_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicValidateWithLoginFlow"
+}

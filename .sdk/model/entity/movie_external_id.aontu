@@ -1,0 +1,114 @@
+# Entity: movie_external_id
+
+main: kit: entity: movie_external_id: {
+
+  alias: field: {}
+
+  fields: {
+    facebook_id: {
+      h: "Facebook Id"
+      n: "facebook_id"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    imdb_id: {
+      h: "Imdb Id"
+      n: "imdb_id"
+      r: false
+      t: "`$STRING`"
+    }
+    instagram_id: {
+      h: "Instagram Id"
+      n: "instagram_id"
+      r: false
+      t: "`$STRING`"
+    }
+    twitter_id: {
+      h: "Twitter Id"
+      n: "twitter_id"
+      r: false
+      t: "`$STRING`"
+    }
+    wikidata_id: {
+      h: "Wikidata Id"
+      n: "wikidata_id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "movie_external_id"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/movie/{movie_id}/external_ids"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "movie_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/movie/{movie_id}/external_ids"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              movie_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "movie"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "external_ids"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

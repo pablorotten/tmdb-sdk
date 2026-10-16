@@ -1,0 +1,37 @@
+{
+  "existing": {
+    "keyword": {
+      "KEYWORD00": {
+        "id": "KEYWORD00",
+        "name": "s15"
+      },
+      "KEYWORD01": {
+        "id": "KEYWORD01",
+        "name": "s29"
+      },
+      "KEYWORD02": {
+        "id": "KEYWORD02",
+        "name": "s3d"
+      }
+    }
+  },
+  "new": {
+    "keyword": {
+      "keyword_ref01": {
+        "name": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/search/keyword": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/keyword/{keyword_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

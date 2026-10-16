@@ -1,0 +1,26 @@
+# BasicMovieChangeFlow
+
+main: kit: flow: BasicMovieChangeFlow:
+{
+  entity: "movie_change",
+  kind: "basic",
+  name: "BasicMovieChangeFlow",
+  step: [
+    {
+      m: {
+        movie_id: "movie01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "movie_change_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieChangeFlow"
+}

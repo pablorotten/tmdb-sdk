@@ -1,0 +1,32 @@
+# BasicPersonExternalIdFlow
+
+main: kit: flow: BasicPersonExternalIdFlow:
+{
+  entity: "person_external_id",
+  kind: "basic",
+  name: "BasicPersonExternalIdFlow",
+  step: [
+    {
+      i: {
+        ref: "person_external_id_ref01",
+        srcdatavar: "person_external_id_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "person_external_id01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-person_external_id_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPersonExternalIdFlow"
+}

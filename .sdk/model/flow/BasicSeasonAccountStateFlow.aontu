@@ -1,0 +1,27 @@
+# BasicSeasonAccountStateFlow
+
+main: kit: flow: BasicSeasonAccountStateFlow:
+{
+  entity: "season_account_state",
+  kind: "basic",
+  name: "BasicSeasonAccountStateFlow",
+  step: [
+    {
+      m: {
+        season_number: "season_number01",
+        tv_id: "tv01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "season_account_state_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSeasonAccountStateFlow"
+}

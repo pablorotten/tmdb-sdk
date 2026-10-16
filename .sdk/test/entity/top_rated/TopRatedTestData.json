@@ -1,0 +1,101 @@
+{
+  "existing": {
+    "top_rated": {
+      "TOP_RATED00": {
+        "adult": true,
+        "backdrop_path": "sb5",
+        "first_air_date": "sb6",
+        "genre_ids": [],
+        "id": "TOP_RATED00",
+        "name": "sb9",
+        "origin_country": [],
+        "original_language": "sbb",
+        "original_name": "sbc",
+        "original_title": "sbd",
+        "overview": "sbe",
+        "popularity": 191,
+        "poster_path": "sc0",
+        "release_date": "sc1",
+        "title": "sc2",
+        "video": false,
+        "vote_average": 196,
+        "vote_count": 197
+      },
+      "TOP_RATED01": {
+        "adult": true,
+        "backdrop_path": "s169",
+        "first_air_date": "s16a",
+        "genre_ids": [],
+        "id": "TOP_RATED01",
+        "name": "s16d",
+        "origin_country": [],
+        "original_language": "s16f",
+        "original_name": "s170",
+        "original_title": "s171",
+        "overview": "s172",
+        "popularity": 371,
+        "poster_path": "s174",
+        "release_date": "s175",
+        "title": "s176",
+        "video": false,
+        "vote_average": 376,
+        "vote_count": 377
+      },
+      "TOP_RATED02": {
+        "adult": true,
+        "backdrop_path": "s21d",
+        "first_air_date": "s21e",
+        "genre_ids": [],
+        "id": "TOP_RATED02",
+        "name": "s221",
+        "origin_country": [],
+        "original_language": "s223",
+        "original_name": "s224",
+        "original_title": "s225",
+        "overview": "s226",
+        "popularity": 551,
+        "poster_path": "s228",
+        "release_date": "s229",
+        "title": "s22a",
+        "video": false,
+        "vote_average": 556,
+        "vote_count": 557
+      }
+    }
+  },
+  "new": {
+    "top_rated": {
+      "top_rated_ref01": {
+        "adult": true,
+        "backdrop_path": "s2d1",
+        "first_air_date": "s2d2",
+        "genre_ids": [],
+        "name": "s2d5",
+        "origin_country": [],
+        "original_language": "s2d7",
+        "original_name": "s2d8",
+        "original_title": "s2d9",
+        "overview": "s2da",
+        "popularity": 731,
+        "poster_path": "s2dc",
+        "release_date": "s2dd",
+        "title": "s2de",
+        "video": false,
+        "vote_average": 736,
+        "vote_count": 737
+      }
+    }
+  },
+  "requests": {
+    "GET /3/movie/top_rated": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/tv/top_rated": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# BasicMovieAccountStateFlow
+
+main: kit: flow: BasicMovieAccountStateFlow:
+{
+  entity: "movie_account_state",
+  kind: "basic",
+  name: "BasicMovieAccountStateFlow",
+  step: [
+    {
+      i: {
+        ref: "movie_account_state_ref01",
+        srcdatavar: "movie_account_state_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "movie_account_state01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-movie_account_state_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieAccountStateFlow"
+}

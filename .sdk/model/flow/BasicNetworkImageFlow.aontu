@@ -1,0 +1,26 @@
+# BasicNetworkImageFlow
+
+main: kit: flow: BasicNetworkImageFlow:
+{
+  entity: "network_image",
+  kind: "basic",
+  name: "BasicNetworkImageFlow",
+  step: [
+    {
+      m: {
+        network_id: "network01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "network_image_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicNetworkImageFlow"
+}

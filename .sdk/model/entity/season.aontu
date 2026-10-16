@@ -1,0 +1,161 @@
+# Entity: season
+
+main: kit: entity: season: {
+
+  alias: field: {}
+
+  fields: {
+    air_date: {
+      h: "Air Date"
+      n: "air_date"
+      r: false
+      t: "`$STRING`"
+    }
+    episodes: {
+      h: "Episodes"
+      n: "episodes"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    networks: {
+      h: "Networks"
+      n: "networks"
+      r: false
+      t: "`$ARRAY`"
+    }
+    overview: {
+      h: "Overview"
+      n: "overview"
+      r: false
+      t: "`$STRING`"
+    }
+    poster_path: {
+      h: "Poster Path"
+      n: "poster_path"
+      r: false
+      t: "`$STRING`"
+    }
+    season_number: {
+      h: "Season Number"
+      n: "season_number"
+      r: false
+      t: "`$INTEGER`"
+    }
+    vote_average: {
+      h: "Vote Average"
+      n: "vote_average"
+      r: false
+      t: "`$NUMBER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "season"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/season/{season_number}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "season_number"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "param"
+                n: "tv_id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "append_to_response"
+                or: "append_to_response"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/season/{season_number}"
+          q: {
+            exist: [
+              "id"
+              "tv_id"
+            ]
+          }
+          r: {
+            param: {
+              season_number: "id"
+              series_id: "tv_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "tv_id"
+            }
+            {
+              lit: "season"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

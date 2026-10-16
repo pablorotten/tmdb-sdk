@@ -1,0 +1,26 @@
+# BasicTvChangeFlow
+
+main: kit: flow: BasicTvChangeFlow:
+{
+  entity: "tv_change",
+  kind: "basic",
+  name: "BasicTvChangeFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_change_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvChangeFlow"
+}

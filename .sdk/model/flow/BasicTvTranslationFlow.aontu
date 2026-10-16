@@ -1,0 +1,26 @@
+# BasicTvTranslationFlow
+
+main: kit: flow: BasicTvTranslationFlow:
+{
+  entity: "tv_translation",
+  kind: "basic",
+  name: "BasicTvTranslationFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_translation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvTranslationFlow"
+}

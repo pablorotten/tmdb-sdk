@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "authentication": {
+      "AUTHENTICATION00": {
+        "status_code": 30,
+        "status_message": "s1f",
+        "success": true,
+        "id": "AUTHENTICATION00"
+      },
+      "AUTHENTICATION01": {
+        "status_code": 60,
+        "status_message": "s3d",
+        "success": true,
+        "id": "AUTHENTICATION01"
+      },
+      "AUTHENTICATION02": {
+        "status_code": 90,
+        "status_message": "s5b",
+        "success": true,
+        "id": "AUTHENTICATION02"
+      }
+    }
+  },
+  "new": {
+    "authentication": {
+      "authentication_ref01": {
+        "status_code": 120,
+        "status_message": "s79",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /3/authentication": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

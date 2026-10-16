@@ -1,0 +1,26 @@
+# BasicMovieAlternativeTitleFlow
+
+main: kit: flow: BasicMovieAlternativeTitleFlow:
+{
+  entity: "movie_alternative_title",
+  kind: "basic",
+  name: "BasicMovieAlternativeTitleFlow",
+  step: [
+    {
+      m: {
+        movie_id: "movie01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "movie_alternative_title_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieAlternativeTitleFlow"
+}

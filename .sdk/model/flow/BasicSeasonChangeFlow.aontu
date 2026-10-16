@@ -1,0 +1,26 @@
+# BasicSeasonChangeFlow
+
+main: kit: flow: BasicSeasonChangeFlow:
+{
+  entity: "season_change",
+  kind: "basic",
+  name: "BasicSeasonChangeFlow",
+  step: [
+    {
+      m: {
+        season_id: "season01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "season_change_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSeasonChangeFlow"
+}

@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "n4n": {
+      "N4N00": {
+        "RAW_BODY": "s1e",
+        "session_id": "SESSION01",
+        "success": true,
+        "id": "N4N00"
+      },
+      "N4N01": {
+        "RAW_BODY": "s3c",
+        "session_id": "SESSION01",
+        "success": true,
+        "id": "N4N01"
+      },
+      "N4N02": {
+        "RAW_BODY": "s5a",
+        "session_id": "SESSION01",
+        "success": true,
+        "id": "N4N02"
+      }
+    }
+  },
+  "new": {
+    "n4n": {
+      "n4n_ref01": {
+        "RAW_BODY": "s78",
+        "session_id": "SESSION01",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "POST /3/authentication/session/convert/4": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# BasicCompanyAlternativeNameFlow
+
+main: kit: flow: BasicCompanyAlternativeNameFlow:
+{
+  entity: "company_alternative_name",
+  kind: "basic",
+  name: "BasicCompanyAlternativeNameFlow",
+  step: [
+    {
+      m: {
+        company_id: "company01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "company_alternative_name_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCompanyAlternativeNameFlow"
+}

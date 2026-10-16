@@ -1,0 +1,26 @@
+# BasicPersonCombinedCreditFlow
+
+main: kit: flow: BasicPersonCombinedCreditFlow:
+{
+  entity: "person_combined_credit",
+  kind: "basic",
+  name: "BasicPersonCombinedCreditFlow",
+  step: [
+    {
+      m: {
+        person_id: "person01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "person_combined_credit_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPersonCombinedCreditFlow"
+}

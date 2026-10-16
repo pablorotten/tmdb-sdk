@@ -1,0 +1,127 @@
+# Entity: credit
+
+main: kit: entity: credit: {
+
+  alias: field: {}
+
+  fields: {
+    credit_type: {
+      h: "Credit Type"
+      n: "credit_type"
+      r: false
+      t: "`$STRING`"
+    }
+    department: {
+      h: "Department"
+      n: "department"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    job: {
+      h: "Job"
+      n: "job"
+      r: false
+      t: "`$STRING`"
+    }
+    media: {
+      h: "Media"
+      n: "media"
+      r: false
+      t: "`$OBJECT`"
+    }
+    media_type: {
+      h: "Media Type"
+      n: "media_type"
+      r: false
+      t: "`$STRING`"
+    }
+    person: {
+      h: "Person"
+      n: "person"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "credit"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/credit/{credit_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "credit_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/credit/{credit_id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              credit_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "credit"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

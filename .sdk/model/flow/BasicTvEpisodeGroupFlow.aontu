@@ -1,0 +1,26 @@
+# BasicTvEpisodeGroupFlow
+
+main: kit: flow: BasicTvEpisodeGroupFlow:
+{
+  entity: "tv_episode_group",
+  kind: "basic",
+  name: "BasicTvEpisodeGroupFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_episode_group_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvEpisodeGroupFlow"
+}

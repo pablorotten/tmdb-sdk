@@ -1,0 +1,96 @@
+# Entity: tv_screened_theatrically
+
+main: kit: entity: tv_screened_theatrically: {
+
+  alias: field: {}
+
+  fields: {
+    episode_number: {
+      h: "Episode Number"
+      n: "episode_number"
+      r: false
+      t: "`$INTEGER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    season_number: {
+      h: "Season Number"
+      n: "season_number"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "tv_screened_theatrically"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/screened_theatrically"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/screened_theatrically"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              series_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "screened_theatrically"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

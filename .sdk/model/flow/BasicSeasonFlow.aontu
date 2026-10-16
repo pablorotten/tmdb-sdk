@@ -1,0 +1,33 @@
+# BasicSeasonFlow
+
+main: kit: flow: BasicSeasonFlow:
+{
+  entity: "season",
+  kind: "basic",
+  name: "BasicSeasonFlow",
+  step: [
+    {
+      i: {
+        ref: "season_ref01",
+        srcdatavar: "season_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "season01",
+        tv_id: "tv01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-season_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSeasonFlow"
+}

@@ -1,0 +1,165 @@
+# Entity: upcoming
+
+main: kit: entity: upcoming: {
+
+  alias: field: {}
+
+  fields: {
+    adult: {
+      h: "Adult"
+      n: "adult"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    backdrop_path: {
+      h: "Backdrop Path"
+      n: "backdrop_path"
+      r: false
+      t: "`$STRING`"
+    }
+    genre_ids: {
+      h: "Genre Ids"
+      n: "genre_ids"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    original_language: {
+      h: "Original Language"
+      n: "original_language"
+      r: false
+      t: "`$STRING`"
+    }
+    original_title: {
+      h: "Original Title"
+      n: "original_title"
+      r: false
+      t: "`$STRING`"
+    }
+    overview: {
+      h: "Overview"
+      n: "overview"
+      r: false
+      t: "`$STRING`"
+    }
+    popularity: {
+      h: "Popularity"
+      n: "popularity"
+      r: false
+      t: "`$NUMBER`"
+    }
+    poster_path: {
+      h: "Poster Path"
+      n: "poster_path"
+      r: false
+      t: "`$STRING`"
+    }
+    release_date: {
+      h: "Release Date"
+      n: "release_date"
+      r: false
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: false
+      t: "`$STRING`"
+    }
+    video: {
+      h: "Video"
+      n: "video"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    vote_average: {
+      h: "Vote Average"
+      n: "vote_average"
+      r: false
+      t: "`$INTEGER`"
+    }
+    vote_count: {
+      h: "Vote Count"
+      n: "vote_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "upcoming"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/movie/upcoming"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "region"
+                or: "region"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/movie/upcoming"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "movie"
+            }
+            {
+              lit: "upcoming"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

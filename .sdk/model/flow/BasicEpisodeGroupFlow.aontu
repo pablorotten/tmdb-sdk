@@ -1,0 +1,32 @@
+# BasicEpisodeGroupFlow
+
+main: kit: flow: BasicEpisodeGroupFlow:
+{
+  entity: "episode_group",
+  kind: "basic",
+  name: "BasicEpisodeGroupFlow",
+  step: [
+    {
+      i: {
+        ref: "episode_group_ref01",
+        srcdatavar: "episode_group_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "episode_group01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-episode_group_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEpisodeGroupFlow"
+}

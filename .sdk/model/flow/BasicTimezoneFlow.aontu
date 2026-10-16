@@ -1,0 +1,22 @@
+# BasicTimezoneFlow
+
+main: kit: flow: BasicTimezoneFlow:
+{
+  entity: "timezone",
+  kind: "basic",
+  name: "BasicTimezoneFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "timezone_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTimezoneFlow"
+}

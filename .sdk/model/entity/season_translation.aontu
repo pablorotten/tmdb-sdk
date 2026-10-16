@@ -1,0 +1,120 @@
+# Entity: season_translation
+
+main: kit: entity: season_translation: {
+
+  alias: field: {}
+
+  fields: {
+    data: {
+      h: "Data"
+      n: "data"
+      r: false
+      t: "`$OBJECT`"
+    }
+    english_name: {
+      h: "English Name"
+      n: "english_name"
+      r: false
+      t: "`$STRING`"
+    }
+    iso_3166_1: {
+      h: "Iso 3166 1"
+      n: "iso_3166_1"
+      r: false
+      t: "`$STRING`"
+    }
+    iso_639_1: {
+      h: "Iso 639 1"
+      n: "iso_639_1"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "season_translation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/season/{season_number}/translations"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "season_number"
+                or: "season_number"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "param"
+                n: "tv_id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/season/{season_number}/translations"
+          q: {
+            exist: [
+              "season_number"
+              "tv_id"
+            ]
+          }
+          r: {
+            param: {
+              series_id: "tv_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "tv_id"
+            }
+            {
+              lit: "season"
+            }
+            {
+              var: "season_number"
+            }
+            {
+              lit: "translations"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.translations`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.season")]
+  ]
+
+}

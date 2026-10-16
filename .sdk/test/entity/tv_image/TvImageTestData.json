@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "tv_image": {
+      "TV_IMAGE00": {
+        "backdrops": [],
+        "id": "TV_IMAGE00",
+        "logos": [],
+        "posters": []
+      },
+      "TV_IMAGE01": {
+        "backdrops": [],
+        "id": "TV_IMAGE01",
+        "logos": [],
+        "posters": []
+      },
+      "TV_IMAGE02": {
+        "backdrops": [],
+        "id": "TV_IMAGE02",
+        "logos": [],
+        "posters": []
+      }
+    }
+  },
+  "new": {
+    "tv_image": {
+      "tv_image_ref01": {
+        "backdrops": [],
+        "logos": [],
+        "posters": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/images": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

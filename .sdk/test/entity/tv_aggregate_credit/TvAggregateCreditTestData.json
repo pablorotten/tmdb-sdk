@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "tv_aggregate_credit": {
+      "TV_AGGREGATE_CREDIT00": {
+        "cast": [],
+        "crew": [],
+        "id": "TV_AGGREGATE_CREDIT00"
+      },
+      "TV_AGGREGATE_CREDIT01": {
+        "cast": [],
+        "crew": [],
+        "id": "TV_AGGREGATE_CREDIT01"
+      },
+      "TV_AGGREGATE_CREDIT02": {
+        "cast": [],
+        "crew": [],
+        "id": "TV_AGGREGATE_CREDIT02"
+      }
+    }
+  },
+  "new": {
+    "tv_aggregate_credit": {
+      "tv_aggregate_credit_ref01": {
+        "cast": [],
+        "crew": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/aggregate_credits": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

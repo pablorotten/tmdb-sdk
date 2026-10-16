@@ -1,0 +1,26 @@
+# BasicTvVideoFlow
+
+main: kit: flow: BasicTvVideoFlow:
+{
+  entity: "tv_video",
+  kind: "basic",
+  name: "BasicTvVideoFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_video_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvVideoFlow"
+}

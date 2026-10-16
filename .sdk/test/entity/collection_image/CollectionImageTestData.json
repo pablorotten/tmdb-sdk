@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "collection_image": {
+      "COLLECTION_IMAGE00": {
+        "backdrops": [],
+        "id": "COLLECTION_IMAGE00",
+        "posters": []
+      },
+      "COLLECTION_IMAGE01": {
+        "backdrops": [],
+        "id": "COLLECTION_IMAGE01",
+        "posters": []
+      },
+      "COLLECTION_IMAGE02": {
+        "backdrops": [],
+        "id": "COLLECTION_IMAGE02",
+        "posters": []
+      }
+    }
+  },
+  "new": {
+    "collection_image": {
+      "collection_image_ref01": {
+        "backdrops": [],
+        "posters": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/collection/{collection_id}/images": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

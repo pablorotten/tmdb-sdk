@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "movie_change": {
+      "MOVIE_CHANGE00": {
+        "id": "MOVIE_CHANGE00",
+        "items": [],
+        "key": "s20"
+      },
+      "MOVIE_CHANGE01": {
+        "id": "MOVIE_CHANGE01",
+        "items": [],
+        "key": "s3e"
+      },
+      "MOVIE_CHANGE02": {
+        "id": "MOVIE_CHANGE02",
+        "items": [],
+        "key": "s5c"
+      }
+    }
+  },
+  "new": {
+    "movie_change": {
+      "movie_change_ref01": {
+        "items": [],
+        "key": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/movie/{movie_id}/changes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

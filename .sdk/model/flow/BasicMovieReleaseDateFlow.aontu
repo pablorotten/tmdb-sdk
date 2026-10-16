@@ -1,0 +1,26 @@
+# BasicMovieReleaseDateFlow
+
+main: kit: flow: BasicMovieReleaseDateFlow:
+{
+  entity: "movie_release_date",
+  kind: "basic",
+  name: "BasicMovieReleaseDateFlow",
+  step: [
+    {
+      m: {
+        movie_id: "movie01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "movie_release_date_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieReleaseDateFlow"
+}

@@ -1,0 +1,37 @@
+{
+  "existing": {
+    "country": {
+      "COUNTRY00": {
+        "english_name": "s1e",
+        "iso_3166_1": "s1f",
+        "native_name": "s20"
+      },
+      "COUNTRY01": {
+        "english_name": "s3c",
+        "iso_3166_1": "s3d",
+        "native_name": "s3e"
+      },
+      "COUNTRY02": {
+        "english_name": "s5a",
+        "iso_3166_1": "s5b",
+        "native_name": "s5c"
+      }
+    }
+  },
+  "new": {
+    "country": {
+      "country_ref01": {
+        "english_name": "s78",
+        "iso_3166_1": "s79",
+        "native_name": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/configuration/countries": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

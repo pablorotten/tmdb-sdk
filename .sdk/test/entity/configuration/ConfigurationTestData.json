@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "configuration": {
+      "CONFIGURATION00": {
+        "change_keys": [],
+        "images": {}
+      },
+      "CONFIGURATION01": {
+        "change_keys": [],
+        "images": {}
+      },
+      "CONFIGURATION02": {
+        "change_keys": [],
+        "images": {}
+      }
+    }
+  },
+  "new": {
+    "configuration": {
+      "configuration_ref01": {
+        "change_keys": [],
+        "images": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /3/configuration": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

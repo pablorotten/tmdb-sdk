@@ -1,0 +1,22 @@
+# BasicChangeFlow
+
+main: kit: flow: BasicChangeFlow:
+{
+  entity: "change",
+  kind: "basic",
+  name: "BasicChangeFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "change_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicChangeFlow"
+}

@@ -1,0 +1,51 @@
+{
+  "existing": {
+    "provider": {
+      "PROVIDER00": {
+        "id": "PROVIDER00",
+        "results": {},
+        "season_id": "SEASON01",
+        "tv_id": "TV01",
+        "movie_id": "MOVIE01"
+      },
+      "PROVIDER01": {
+        "id": "PROVIDER01",
+        "results": {},
+        "season_id": "SEASON01",
+        "tv_id": "TV01",
+        "movie_id": "MOVIE01"
+      },
+      "PROVIDER02": {
+        "id": "PROVIDER02",
+        "results": {},
+        "season_id": "SEASON01",
+        "tv_id": "TV01",
+        "movie_id": "MOVIE01"
+      }
+    }
+  },
+  "new": {
+    "provider": {
+      "provider_ref01": {
+        "results": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/season/{season_number}/watch/providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/movie/{movie_id}/watch/providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/tv/{series_id}/watch/providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

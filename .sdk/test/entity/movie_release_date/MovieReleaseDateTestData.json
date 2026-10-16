@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "movie_release_date": {
+      "MOVIE_RELEASE_DATE00": {
+        "id": "MOVIE_RELEASE_DATE00",
+        "iso_3166_1": "s1f",
+        "release_dates": []
+      },
+      "MOVIE_RELEASE_DATE01": {
+        "id": "MOVIE_RELEASE_DATE01",
+        "iso_3166_1": "s3d",
+        "release_dates": []
+      },
+      "MOVIE_RELEASE_DATE02": {
+        "id": "MOVIE_RELEASE_DATE02",
+        "iso_3166_1": "s5b",
+        "release_dates": []
+      }
+    }
+  },
+  "new": {
+    "movie_release_date": {
+      "movie_release_date_ref01": {
+        "iso_3166_1": "s79",
+        "release_dates": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/movie/{movie_id}/release_dates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

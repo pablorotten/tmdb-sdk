@@ -1,0 +1,26 @@
+# BasicTvRecommendationFlow
+
+main: kit: flow: BasicTvRecommendationFlow:
+{
+  entity: "tv_recommendation",
+  kind: "basic",
+  name: "BasicTvRecommendationFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_recommendation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvRecommendationFlow"
+}

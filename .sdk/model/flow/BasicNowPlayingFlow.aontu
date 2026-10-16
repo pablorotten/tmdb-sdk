@@ -1,0 +1,22 @@
+# BasicNowPlayingFlow
+
+main: kit: flow: BasicNowPlayingFlow:
+{
+  entity: "now_playing",
+  kind: "basic",
+  name: "BasicNowPlayingFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "now_playing_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicNowPlayingFlow"
+}

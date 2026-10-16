@@ -1,0 +1,332 @@
+# Entity: latest
+
+main: kit: entity: latest: {
+
+  alias: field: {}
+
+  fields: {
+    adult: {
+      h: "Adult"
+      n: "adult"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    air_date: {
+      h: "Air Date"
+      n: "air_date"
+      r: false
+      t: "`$ANY`"
+    }
+    also_known_as: {
+      h: "Also Known As"
+      n: "also_known_as"
+      r: false
+      t: "`$ARRAY`"
+    }
+    backdrop_path: {
+      h: "Backdrop Path"
+      n: "backdrop_path"
+      r: false
+      t: "`$ANY`"
+    }
+    belongs_to_collection: {
+      h: "Belongs To Collection"
+      n: "belongs_to_collection"
+      r: false
+      t: "`$ANY`"
+    }
+    biography: {
+      h: "Biography"
+      n: "biography"
+      r: false
+      t: "`$STRING`"
+    }
+    birthday: {
+      h: "Birthday"
+      n: "birthday"
+      r: false
+      t: "`$ANY`"
+    }
+    budget: {
+      h: "Budget"
+      n: "budget"
+      r: false
+      t: "`$INTEGER`"
+    }
+    deathday: {
+      h: "Deathday"
+      n: "deathday"
+      r: false
+      t: "`$ANY`"
+    }
+    episode_count: {
+      h: "Episode Count"
+      n: "episode_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    gender: {
+      h: "Gender"
+      n: "gender"
+      r: false
+      t: "`$INTEGER`"
+    }
+    genres: {
+      h: "Genres"
+      n: "genres"
+      r: false
+      t: "`$ARRAY`"
+    }
+    homepage: {
+      h: "Homepage"
+      n: "homepage"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    imdb_id: {
+      h: "Imdb Id"
+      n: "imdb_id"
+      r: false
+      t: "`$STRING`"
+    }
+    known_for_department: {
+      h: "Known For Department"
+      n: "known_for_department"
+      r: false
+      t: "`$ANY`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    original_language: {
+      h: "Original Language"
+      n: "original_language"
+      r: false
+      t: "`$STRING`"
+    }
+    original_title: {
+      h: "Original Title"
+      n: "original_title"
+      r: false
+      t: "`$STRING`"
+    }
+    overview: {
+      h: "Overview"
+      n: "overview"
+      r: false
+      t: "`$STRING`"
+    }
+    place_of_birth: {
+      h: "Place Of Birth"
+      n: "place_of_birth"
+      r: false
+      t: "`$ANY`"
+    }
+    popularity: {
+      h: "Popularity"
+      n: "popularity"
+      r: false
+      t: "`$INTEGER`"
+    }
+    poster_path: {
+      h: "Poster Path"
+      n: "poster_path"
+      r: false
+      t: "`$ANY`"
+    }
+    production_companies: {
+      h: "Production Companies"
+      n: "production_companies"
+      r: false
+      t: "`$ARRAY`"
+    }
+    production_countries: {
+      h: "Production Countries"
+      n: "production_countries"
+      r: false
+      t: "`$ARRAY`"
+    }
+    profile_path: {
+      h: "Profile Path"
+      n: "profile_path"
+      r: false
+      t: "`$ANY`"
+    }
+    release_date: {
+      h: "Release Date"
+      n: "release_date"
+      r: false
+      t: "`$STRING`"
+    }
+    revenue: {
+      h: "Revenue"
+      n: "revenue"
+      r: false
+      t: "`$INTEGER`"
+    }
+    runtime: {
+      h: "Runtime"
+      n: "runtime"
+      r: false
+      t: "`$INTEGER`"
+    }
+    season_number: {
+      h: "Season Number"
+      n: "season_number"
+      r: false
+      t: "`$INTEGER`"
+    }
+    spoken_languages: {
+      h: "Spoken Languages"
+      n: "spoken_languages"
+      r: false
+      t: "`$ARRAY`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: false
+      t: "`$STRING`"
+    }
+    tagline: {
+      h: "Tagline"
+      n: "tagline"
+      r: false
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: false
+      t: "`$STRING`"
+    }
+    video: {
+      h: "Video"
+      n: "video"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    vote_average: {
+      h: "Vote Average"
+      n: "vote_average"
+      r: false
+      t: "`$INTEGER`"
+    }
+    vote_count: {
+      h: "Vote Count"
+      n: "vote_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "latest"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/movie/latest"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/movie/latest"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "movie"
+            }
+            {
+              lit: "latest"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /3/person/latest"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/person/latest"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "person"
+            }
+            {
+              lit: "latest"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.also_known_as`"
+          }
+        }
+        {
+          co: {
+            id: "GET /3/tv/latest"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/tv/latest"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              lit: "latest"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

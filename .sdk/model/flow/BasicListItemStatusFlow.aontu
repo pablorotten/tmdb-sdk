@@ -1,0 +1,32 @@
+# BasicListItemStatusFlow
+
+main: kit: flow: BasicListItemStatusFlow:
+{
+  entity: "list_item_status",
+  kind: "basic",
+  name: "BasicListItemStatusFlow",
+  step: [
+    {
+      i: {
+        ref: "list_item_status_ref01",
+        srcdatavar: "list_item_status_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "list_item_status01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-list_item_status_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListItemStatusFlow"
+}

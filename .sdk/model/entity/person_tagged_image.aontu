@@ -1,0 +1,154 @@
+# Entity: person_tagged_image
+
+main: kit: entity: person_tagged_image: {
+
+  alias: field: {}
+
+  fields: {
+    aspect_ratio: {
+      h: "Aspect Ratio"
+      n: "aspect_ratio"
+      r: false
+      t: "`$NUMBER`"
+    }
+    file_path: {
+      h: "File Path"
+      n: "file_path"
+      r: false
+      t: "`$STRING`"
+    }
+    height: {
+      h: "Height"
+      n: "height"
+      r: false
+      t: "`$INTEGER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    image_type: {
+      h: "Image Type"
+      n: "image_type"
+      r: false
+      t: "`$STRING`"
+    }
+    iso_639_1: {
+      h: "Iso 639 1"
+      n: "iso_639_1"
+      r: false
+      t: "`$STRING`"
+    }
+    media: {
+      h: "Media"
+      n: "media"
+      r: false
+      t: "`$OBJECT`"
+    }
+    media_type: {
+      h: "Media Type"
+      n: "media_type"
+      r: false
+      t: "`$STRING`"
+    }
+    vote_average: {
+      h: "Vote Average"
+      n: "vote_average"
+      r: false
+      t: "`$NUMBER`"
+    }
+    vote_count: {
+      h: "Vote Count"
+      n: "vote_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    width: {
+      h: "Width"
+      n: "width"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "person_tagged_image"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/person/{person_id}/tagged_images"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "person_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/person/{person_id}/tagged_images"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              person_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "person"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "tagged_images"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

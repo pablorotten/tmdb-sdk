@@ -1,0 +1,348 @@
+# Entity: person
+
+main: kit: entity: person: {
+
+  alias: field: {}
+
+  fields: {
+    adult: {
+      h: "Adult"
+      n: "adult"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    also_known_as: {
+      h: "Also Known As"
+      n: "also_known_as"
+      r: false
+      t: "`$ARRAY`"
+    }
+    biography: {
+      h: "Biography"
+      n: "biography"
+      r: false
+      t: "`$STRING`"
+    }
+    birthday: {
+      h: "Birthday"
+      n: "birthday"
+      r: false
+      t: "`$STRING`"
+    }
+    deathday: {
+      h: "Deathday"
+      n: "deathday"
+      r: false
+      t: "`$ANY`"
+    }
+    gender: {
+      h: "Gender"
+      n: "gender"
+      r: false
+      t: "`$INTEGER`"
+    }
+    homepage: {
+      h: "Homepage"
+      n: "homepage"
+      r: false
+      t: "`$ANY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    imdb_id: {
+      h: "Imdb Id"
+      n: "imdb_id"
+      r: false
+      t: "`$STRING`"
+    }
+    known_for: {
+      h: "Known For"
+      n: "known_for"
+      r: false
+      t: "`$ARRAY`"
+    }
+    known_for_department: {
+      h: "Known For Department"
+      n: "known_for_department"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    original_name: {
+      h: "Original Name"
+      n: "original_name"
+      r: false
+      t: "`$STRING`"
+    }
+    page: {
+      h: "Page"
+      n: "page"
+      r: false
+      t: "`$INTEGER`"
+    }
+    place_of_birth: {
+      h: "Place Of Birth"
+      n: "place_of_birth"
+      r: false
+      t: "`$STRING`"
+    }
+    popularity: {
+      h: "Popularity"
+      n: "popularity"
+      r: false
+      t: "`$NUMBER`"
+    }
+    profile_path: {
+      h: "Profile Path"
+      n: "profile_path"
+      r: false
+      t: "`$STRING`"
+    }
+    results: {
+      h: "Results"
+      n: "results"
+      r: false
+      t: "`$ARRAY`"
+    }
+    total_pages: {
+      h: "Total Pages"
+      n: "total_pages"
+      r: false
+      t: "`$INTEGER`"
+    }
+    total_results: {
+      h: "Total Results"
+      n: "total_results"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "person"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/search/person"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: false
+                k: "query"
+                n: "include_adult"
+                or: "include_adult"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "query"
+                or: "query"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/search/person"
+          q: {
+            exist: [
+              "query"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "search"
+            }
+            {
+              lit: "person"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/person/{person_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "person_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "append_to_response"
+                or: "append_to_response"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/person/{person_id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              person_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "person"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /3/trending/person/{time_window}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "day"
+                k: "param"
+                n: "id"
+                or: "time_window"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/trending/person/{time_window}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              time_window: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "trending"
+            }
+            {
+              lit: "person"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

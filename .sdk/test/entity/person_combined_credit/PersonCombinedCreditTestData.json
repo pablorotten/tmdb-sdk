@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "person_combined_credit": {
+      "PERSON_COMBINED_CREDIT00": {
+        "cast": [],
+        "crew": [],
+        "id": "PERSON_COMBINED_CREDIT00"
+      },
+      "PERSON_COMBINED_CREDIT01": {
+        "cast": [],
+        "crew": [],
+        "id": "PERSON_COMBINED_CREDIT01"
+      },
+      "PERSON_COMBINED_CREDIT02": {
+        "cast": [],
+        "crew": [],
+        "id": "PERSON_COMBINED_CREDIT02"
+      }
+    }
+  },
+  "new": {
+    "person_combined_credit": {
+      "person_combined_credit_ref01": {
+        "cast": [],
+        "crew": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/person/{person_id}/combined_credits": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

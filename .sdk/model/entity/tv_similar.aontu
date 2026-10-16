@@ -1,0 +1,180 @@
+# Entity: tv_similar
+
+main: kit: entity: tv_similar: {
+
+  alias: field: {}
+
+  fields: {
+    adult: {
+      h: "Adult"
+      n: "adult"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    backdrop_path: {
+      h: "Backdrop Path"
+      n: "backdrop_path"
+      r: false
+      t: "`$STRING`"
+    }
+    first_air_date: {
+      h: "First Air Date"
+      n: "first_air_date"
+      r: false
+      t: "`$STRING`"
+    }
+    genre_ids: {
+      h: "Genre Ids"
+      n: "genre_ids"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    origin_country: {
+      h: "Origin Country"
+      n: "origin_country"
+      r: false
+      t: "`$ARRAY`"
+    }
+    original_language: {
+      h: "Original Language"
+      n: "original_language"
+      r: false
+      t: "`$STRING`"
+    }
+    original_name: {
+      h: "Original Name"
+      n: "original_name"
+      r: false
+      t: "`$STRING`"
+    }
+    overview: {
+      h: "Overview"
+      n: "overview"
+      r: false
+      t: "`$STRING`"
+    }
+    popularity: {
+      h: "Popularity"
+      n: "popularity"
+      r: false
+      t: "`$NUMBER`"
+    }
+    poster_path: {
+      h: "Poster Path"
+      n: "poster_path"
+      r: false
+      t: "`$STRING`"
+    }
+    vote_average: {
+      h: "Vote Average"
+      n: "vote_average"
+      r: false
+      t: "`$INTEGER`"
+    }
+    vote_count: {
+      h: "Vote Count"
+      n: "vote_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "tv_similar"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/similar"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "series_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/similar"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              series_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "similar"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

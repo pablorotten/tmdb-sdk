@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "favorite": {
+      "FAVORITE00": {
+        "RAW_BODY": "s1e",
+        "status_code": 31,
+        "status_message": "s20",
+        "account_id": "ACCOUNT01",
+        "id": "FAVORITE00"
+      },
+      "FAVORITE01": {
+        "RAW_BODY": "s3c",
+        "status_code": 61,
+        "status_message": "s3e",
+        "account_id": "ACCOUNT01",
+        "id": "FAVORITE01"
+      },
+      "FAVORITE02": {
+        "RAW_BODY": "s5a",
+        "status_code": 91,
+        "status_message": "s5c",
+        "account_id": "ACCOUNT01",
+        "id": "FAVORITE02"
+      }
+    }
+  },
+  "new": {
+    "favorite": {
+      "favorite_ref01": {
+        "RAW_BODY": "s78",
+        "status_code": 121,
+        "status_message": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "POST /3/account/{account_id}/favorite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+# BasicEpisodeAccountStateFlow
+
+main: kit: flow: BasicEpisodeAccountStateFlow:
+{
+  entity: "episode_account_state",
+  kind: "basic",
+  name: "BasicEpisodeAccountStateFlow",
+  step: [
+    {
+      i: {
+        ref: "episode_account_state_ref01",
+        srcdatavar: "episode_account_state_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "episode_account_state01",
+        season_id: "season01",
+        tv_id: "tv01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-episode_account_state_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEpisodeAccountStateFlow"
+}

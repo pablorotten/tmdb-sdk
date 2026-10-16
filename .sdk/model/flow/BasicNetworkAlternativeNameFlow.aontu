@@ -1,0 +1,26 @@
+# BasicNetworkAlternativeNameFlow
+
+main: kit: flow: BasicNetworkAlternativeNameFlow:
+{
+  entity: "network_alternative_name",
+  kind: "basic",
+  name: "BasicNetworkAlternativeNameFlow",
+  step: [
+    {
+      m: {
+        network_id: "network01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "network_alternative_name_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicNetworkAlternativeNameFlow"
+}

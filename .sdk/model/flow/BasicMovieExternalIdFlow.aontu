@@ -1,0 +1,32 @@
+# BasicMovieExternalIdFlow
+
+main: kit: flow: BasicMovieExternalIdFlow:
+{
+  entity: "movie_external_id",
+  kind: "basic",
+  name: "BasicMovieExternalIdFlow",
+  step: [
+    {
+      i: {
+        ref: "movie_external_id_ref01",
+        srcdatavar: "movie_external_id_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "movie_external_id01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-movie_external_id_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieExternalIdFlow"
+}

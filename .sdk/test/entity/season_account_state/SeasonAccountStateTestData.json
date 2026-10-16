@@ -1,0 +1,42 @@
+{
+  "existing": {
+    "season_account_state": {
+      "SEASON_ACCOUNT_STATE00": {
+        "episode_number": 30,
+        "id": "SEASON_ACCOUNT_STATE00",
+        "rated": {},
+        "season_number": "SEASON_NUMBER01",
+        "tv_id": "TV01"
+      },
+      "SEASON_ACCOUNT_STATE01": {
+        "episode_number": 60,
+        "id": "SEASON_ACCOUNT_STATE01",
+        "rated": {},
+        "season_number": "SEASON_NUMBER01",
+        "tv_id": "TV01"
+      },
+      "SEASON_ACCOUNT_STATE02": {
+        "episode_number": 90,
+        "id": "SEASON_ACCOUNT_STATE02",
+        "rated": {},
+        "season_number": "SEASON_NUMBER01",
+        "tv_id": "TV01"
+      }
+    }
+  },
+  "new": {
+    "season_account_state": {
+      "season_account_state_ref01": {
+        "episode_number": 120,
+        "rated": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/season/{season_number}/account_states": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

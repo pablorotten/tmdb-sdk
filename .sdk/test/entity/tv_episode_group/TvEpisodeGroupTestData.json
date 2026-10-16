@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "tv_episode_group": {
+      "TV_EPISODE_GROUP00": {
+        "description": "s46",
+        "episode_count": 71,
+        "group_count": 72,
+        "id": "TV_EPISODE_GROUP00",
+        "name": "s4a",
+        "network": {},
+        "type": 76
+      },
+      "TV_EPISODE_GROUP01": {
+        "description": "s8c",
+        "episode_count": 141,
+        "group_count": 142,
+        "id": "TV_EPISODE_GROUP01",
+        "name": "s90",
+        "network": {},
+        "type": 146
+      },
+      "TV_EPISODE_GROUP02": {
+        "description": "sd2",
+        "episode_count": 211,
+        "group_count": 212,
+        "id": "TV_EPISODE_GROUP02",
+        "name": "sd6",
+        "network": {},
+        "type": 216
+      }
+    }
+  },
+  "new": {
+    "tv_episode_group": {
+      "tv_episode_group_ref01": {
+        "description": "s118",
+        "episode_count": 281,
+        "group_count": 282,
+        "name": "s11c",
+        "network": {},
+        "type": 286
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/episode_groups": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

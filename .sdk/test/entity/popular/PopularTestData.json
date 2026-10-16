@@ -1,0 +1,122 @@
+{
+  "existing": {
+    "popular": {
+      "POPULAR00": {
+        "adult": true,
+        "backdrop_path": "sdd",
+        "first_air_date": "sde",
+        "gender": 223,
+        "genre_ids": [],
+        "id": "POPULAR00",
+        "known_for": [],
+        "known_for_department": "se3",
+        "name": "se4",
+        "origin_country": [],
+        "original_language": "se6",
+        "original_name": "se7",
+        "original_title": "se8",
+        "overview": "se9",
+        "popularity": 234,
+        "poster_path": "seb",
+        "profile_path": "sec",
+        "release_date": "sed",
+        "title": "see",
+        "video": false,
+        "vote_average": 240,
+        "vote_count": 241
+      },
+      "POPULAR01": {
+        "adult": true,
+        "backdrop_path": "s1b9",
+        "first_air_date": "s1ba",
+        "gender": 443,
+        "genre_ids": [],
+        "id": "POPULAR01",
+        "known_for": [],
+        "known_for_department": "s1bf",
+        "name": "s1c0",
+        "origin_country": [],
+        "original_language": "s1c2",
+        "original_name": "s1c3",
+        "original_title": "s1c4",
+        "overview": "s1c5",
+        "popularity": 454,
+        "poster_path": "s1c7",
+        "profile_path": "s1c8",
+        "release_date": "s1c9",
+        "title": "s1ca",
+        "video": false,
+        "vote_average": 460,
+        "vote_count": 461
+      },
+      "POPULAR02": {
+        "adult": true,
+        "backdrop_path": "s295",
+        "first_air_date": "s296",
+        "gender": 663,
+        "genre_ids": [],
+        "id": "POPULAR02",
+        "known_for": [],
+        "known_for_department": "s29b",
+        "name": "s29c",
+        "origin_country": [],
+        "original_language": "s29e",
+        "original_name": "s29f",
+        "original_title": "s2a0",
+        "overview": "s2a1",
+        "popularity": 674,
+        "poster_path": "s2a3",
+        "profile_path": "s2a4",
+        "release_date": "s2a5",
+        "title": "s2a6",
+        "video": false,
+        "vote_average": 680,
+        "vote_count": 681
+      }
+    }
+  },
+  "new": {
+    "popular": {
+      "popular_ref01": {
+        "adult": true,
+        "backdrop_path": "s371",
+        "first_air_date": "s372",
+        "gender": 883,
+        "genre_ids": [],
+        "known_for": [],
+        "known_for_department": "s377",
+        "name": "s378",
+        "origin_country": [],
+        "original_language": "s37a",
+        "original_name": "s37b",
+        "original_title": "s37c",
+        "overview": "s37d",
+        "popularity": 894,
+        "poster_path": "s37f",
+        "profile_path": "s380",
+        "release_date": "s381",
+        "title": "s382",
+        "video": false,
+        "vote_average": 900,
+        "vote_count": 901
+      }
+    }
+  },
+  "requests": {
+    "GET /3/movie/popular": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/person/popular": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/tv/popular": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

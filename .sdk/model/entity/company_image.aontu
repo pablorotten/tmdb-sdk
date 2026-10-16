@@ -1,0 +1,126 @@
+# Entity: company_image
+
+main: kit: entity: company_image: {
+
+  alias: field: {}
+
+  fields: {
+    aspect_ratio: {
+      h: "Aspect Ratio"
+      n: "aspect_ratio"
+      r: false
+      t: "`$NUMBER`"
+    }
+    file_path: {
+      h: "File Path"
+      n: "file_path"
+      r: false
+      t: "`$STRING`"
+    }
+    file_type: {
+      h: "File Type"
+      n: "file_type"
+      r: false
+      t: "`$STRING`"
+    }
+    height: {
+      h: "Height"
+      n: "height"
+      r: false
+      t: "`$INTEGER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    vote_average: {
+      h: "Vote Average"
+      n: "vote_average"
+      r: false
+      t: "`$NUMBER`"
+    }
+    vote_count: {
+      h: "Vote Count"
+      n: "vote_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    width: {
+      h: "Width"
+      n: "width"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "company_image"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/company/{company_id}/images"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "company_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/company/{company_id}/images"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              company_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "company"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "images"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.logos`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

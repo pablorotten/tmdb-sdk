@@ -1,0 +1,26 @@
+# BasicTvReviewFlow
+
+main: kit: flow: BasicTvReviewFlow:
+{
+  entity: "tv_review",
+  kind: "basic",
+  name: "BasicTvReviewFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_review_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvReviewFlow"
+}

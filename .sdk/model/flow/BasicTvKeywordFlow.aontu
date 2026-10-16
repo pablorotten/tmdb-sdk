@@ -1,0 +1,26 @@
+# BasicTvKeywordFlow
+
+main: kit: flow: BasicTvKeywordFlow:
+{
+  entity: "tv_keyword",
+  kind: "basic",
+  name: "BasicTvKeywordFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_keyword_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvKeywordFlow"
+}

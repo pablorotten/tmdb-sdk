@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "find": {
+      "FIND00": {
+        "id": "FIND00",
+        "movie_results": [],
+        "person_results": [],
+        "tv_episode_results": [],
+        "tv_results": [],
+        "tv_season_results": []
+      },
+      "FIND01": {
+        "id": "FIND01",
+        "movie_results": [],
+        "person_results": [],
+        "tv_episode_results": [],
+        "tv_results": [],
+        "tv_season_results": []
+      },
+      "FIND02": {
+        "id": "FIND02",
+        "movie_results": [],
+        "person_results": [],
+        "tv_episode_results": [],
+        "tv_results": [],
+        "tv_season_results": []
+      }
+    }
+  },
+  "new": {
+    "find": {
+      "find_ref01": {
+        "movie_results": [],
+        "person_results": [],
+        "tv_episode_results": [],
+        "tv_results": [],
+        "tv_season_results": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/find/{external_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

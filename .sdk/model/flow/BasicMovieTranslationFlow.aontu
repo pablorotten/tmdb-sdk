@@ -1,0 +1,26 @@
+# BasicMovieTranslationFlow
+
+main: kit: flow: BasicMovieTranslationFlow:
+{
+  entity: "movie_translation",
+  kind: "basic",
+  name: "BasicMovieTranslationFlow",
+  step: [
+    {
+      m: {
+        movie_id: "movie01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "movie_translation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieTranslationFlow"
+}

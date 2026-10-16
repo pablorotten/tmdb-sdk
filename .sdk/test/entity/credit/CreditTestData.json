@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "credit": {
+      "CREDIT00": {
+        "credit_type": "s46",
+        "department": "s47",
+        "id": "CREDIT00",
+        "job": "s49",
+        "media": {},
+        "media_type": "s4b",
+        "person": {}
+      },
+      "CREDIT01": {
+        "credit_type": "s8c",
+        "department": "s8d",
+        "id": "CREDIT01",
+        "job": "s8f",
+        "media": {},
+        "media_type": "s91",
+        "person": {}
+      },
+      "CREDIT02": {
+        "credit_type": "sd2",
+        "department": "sd3",
+        "id": "CREDIT02",
+        "job": "sd5",
+        "media": {},
+        "media_type": "sd7",
+        "person": {}
+      }
+    }
+  },
+  "new": {
+    "credit": {
+      "credit_ref01": {
+        "credit_type": "s118",
+        "department": "s119",
+        "job": "s11b",
+        "media": {},
+        "media_type": "s11d",
+        "person": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /3/credit/{credit_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

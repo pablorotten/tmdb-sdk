@@ -1,0 +1,68 @@
+{
+  "existing": {
+    "person_tagged_image": {
+      "PERSON_TAGGED_IMAGE00": {
+        "aspect_ratio": 110,
+        "file_path": "s6f",
+        "height": 112,
+        "id": "PERSON_TAGGED_IMAGE00",
+        "image_type": "s72",
+        "iso_639_1": "s73",
+        "media": {},
+        "media_type": "s75",
+        "vote_average": 118,
+        "vote_count": 119,
+        "width": 120
+      },
+      "PERSON_TAGGED_IMAGE01": {
+        "aspect_ratio": 220,
+        "file_path": "sdd",
+        "height": 222,
+        "id": "PERSON_TAGGED_IMAGE01",
+        "image_type": "se0",
+        "iso_639_1": "se1",
+        "media": {},
+        "media_type": "se3",
+        "vote_average": 228,
+        "vote_count": 229,
+        "width": 230
+      },
+      "PERSON_TAGGED_IMAGE02": {
+        "aspect_ratio": 330,
+        "file_path": "s14b",
+        "height": 332,
+        "id": "PERSON_TAGGED_IMAGE02",
+        "image_type": "s14e",
+        "iso_639_1": "s14f",
+        "media": {},
+        "media_type": "s151",
+        "vote_average": 338,
+        "vote_count": 339,
+        "width": 340
+      }
+    }
+  },
+  "new": {
+    "person_tagged_image": {
+      "person_tagged_image_ref01": {
+        "aspect_ratio": 440,
+        "file_path": "s1b9",
+        "height": 442,
+        "image_type": "s1bc",
+        "iso_639_1": "s1bd",
+        "media": {},
+        "media_type": "s1bf",
+        "vote_average": 448,
+        "vote_count": 449,
+        "width": 450
+      }
+    }
+  },
+  "requests": {
+    "GET /3/person/{person_id}/tagged_images": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      description: "The tmdb-api."
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: ""
+        scheme: "sec0"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          url: "https://api.themoviedb.org"
+        }
+      ]
+      title: "tmdb-api"
+      version: "3"
+      website: "https://themoviedb.org"
+    }
+  }
+}
+

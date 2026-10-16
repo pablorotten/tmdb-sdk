@@ -1,0 +1,76 @@
+{
+  "existing": {
+    "on_the_air": {
+      "ON_THE_AIR00": {
+        "backdrop_path": "s82",
+        "first_air_date": "s83",
+        "genre_ids": [],
+        "id": "ON_THE_AIR00",
+        "name": "s86",
+        "origin_country": [],
+        "original_language": "s88",
+        "original_name": "s89",
+        "overview": "s8a",
+        "popularity": 139,
+        "poster_path": "s8c",
+        "vote_average": 141,
+        "vote_count": 142
+      },
+      "ON_THE_AIR01": {
+        "backdrop_path": "s104",
+        "first_air_date": "s105",
+        "genre_ids": [],
+        "id": "ON_THE_AIR01",
+        "name": "s108",
+        "origin_country": [],
+        "original_language": "s10a",
+        "original_name": "s10b",
+        "overview": "s10c",
+        "popularity": 269,
+        "poster_path": "s10e",
+        "vote_average": 271,
+        "vote_count": 272
+      },
+      "ON_THE_AIR02": {
+        "backdrop_path": "s186",
+        "first_air_date": "s187",
+        "genre_ids": [],
+        "id": "ON_THE_AIR02",
+        "name": "s18a",
+        "origin_country": [],
+        "original_language": "s18c",
+        "original_name": "s18d",
+        "overview": "s18e",
+        "popularity": 399,
+        "poster_path": "s190",
+        "vote_average": 401,
+        "vote_count": 402
+      }
+    }
+  },
+  "new": {
+    "on_the_air": {
+      "on_the_air_ref01": {
+        "backdrop_path": "s208",
+        "first_air_date": "s209",
+        "genre_ids": [],
+        "name": "s20c",
+        "origin_country": [],
+        "original_language": "s20e",
+        "original_name": "s20f",
+        "overview": "s210",
+        "popularity": 529,
+        "poster_path": "s212",
+        "vote_average": 531,
+        "vote_count": 532
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/on_the_air": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

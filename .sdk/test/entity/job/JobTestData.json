@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "job": {
+      "JOB00": {
+        "department": "s14",
+        "jobs": []
+      },
+      "JOB01": {
+        "department": "s28",
+        "jobs": []
+      },
+      "JOB02": {
+        "department": "s3c",
+        "jobs": []
+      }
+    }
+  },
+  "new": {
+    "job": {
+      "job_ref01": {
+        "department": "s50",
+        "jobs": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/configuration/jobs": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

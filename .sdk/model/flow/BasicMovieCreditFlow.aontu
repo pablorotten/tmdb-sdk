@@ -1,0 +1,26 @@
+# BasicMovieCreditFlow
+
+main: kit: flow: BasicMovieCreditFlow:
+{
+  entity: "movie_credit",
+  kind: "basic",
+  name: "BasicMovieCreditFlow",
+  step: [
+    {
+      m: {
+        movie_id: "movie01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "movie_credit_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieCreditFlow"
+}

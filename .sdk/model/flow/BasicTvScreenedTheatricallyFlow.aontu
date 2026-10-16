@@ -1,0 +1,26 @@
+# BasicTvScreenedTheatricallyFlow
+
+main: kit: flow: BasicTvScreenedTheatricallyFlow:
+{
+  entity: "tv_screened_theatrically",
+  kind: "basic",
+  name: "BasicTvScreenedTheatricallyFlow",
+  step: [
+    {
+      m: {
+        series_id: "series01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tv_screened_theatrically_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvScreenedTheatricallyFlow"
+}

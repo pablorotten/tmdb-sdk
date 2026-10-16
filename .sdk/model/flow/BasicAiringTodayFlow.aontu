@@ -1,0 +1,22 @@
+# BasicAiringTodayFlow
+
+main: kit: flow: BasicAiringTodayFlow:
+{
+  entity: "airing_today",
+  kind: "basic",
+  name: "BasicAiringTodayFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "airing_today_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAiringTodayFlow"
+}

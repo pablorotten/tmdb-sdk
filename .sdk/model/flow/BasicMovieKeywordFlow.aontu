@@ -1,0 +1,26 @@
+# BasicMovieKeywordFlow
+
+main: kit: flow: BasicMovieKeywordFlow:
+{
+  entity: "movie_keyword",
+  kind: "basic",
+  name: "BasicMovieKeywordFlow",
+  step: [
+    {
+      m: {
+        movie_id: "movie01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "movie_keyword_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieKeywordFlow"
+}

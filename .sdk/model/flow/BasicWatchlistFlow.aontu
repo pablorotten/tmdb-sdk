@@ -1,0 +1,22 @@
+# BasicWatchlistFlow
+
+main: kit: flow: BasicWatchlistFlow:
+{
+  entity: "watchlist",
+  kind: "basic",
+  name: "BasicWatchlistFlow",
+  step: [
+    {
+      i: {
+        ref: "watchlist_ref01"
+      }
+
+      m: {
+        account_id: "account01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicWatchlistFlow"
+}

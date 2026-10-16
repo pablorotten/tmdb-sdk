@@ -1,0 +1,54 @@
+{
+  "existing": {
+    "season_external_id": {
+      "SEASON_EXTERNAL_ID00": {
+        "freebase_id": "FREEBASE01",
+        "freebase_mid": "s3d",
+        "id": "SEASON_EXTERNAL_ID00",
+        "tvdb_id": "TVDB01",
+        "tvrage_id": "TVRAGE01",
+        "wikidata_id": "WIKIDATA01",
+        "season_number": "SEASON_NUMBER01",
+        "tv_id": "TV01"
+      },
+      "SEASON_EXTERNAL_ID01": {
+        "freebase_id": "FREEBASE01",
+        "freebase_mid": "s79",
+        "id": "SEASON_EXTERNAL_ID01",
+        "tvdb_id": "TVDB01",
+        "tvrage_id": "TVRAGE01",
+        "wikidata_id": "WIKIDATA01",
+        "season_number": "SEASON_NUMBER01",
+        "tv_id": "TV01"
+      },
+      "SEASON_EXTERNAL_ID02": {
+        "freebase_id": "FREEBASE01",
+        "freebase_mid": "sb5",
+        "id": "SEASON_EXTERNAL_ID02",
+        "tvdb_id": "TVDB01",
+        "tvrage_id": "TVRAGE01",
+        "wikidata_id": "WIKIDATA01",
+        "season_number": "SEASON_NUMBER01",
+        "tv_id": "TV01"
+      }
+    }
+  },
+  "new": {
+    "season_external_id": {
+      "season_external_id_ref01": {
+        "freebase_id": "FREEBASE01",
+        "freebase_mid": "sf1",
+        "tvdb_id": "TVDB01",
+        "tvrage_id": "TVRAGE01",
+        "wikidata_id": "WIKIDATA01"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/season/{season_number}/external_ids": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

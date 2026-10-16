@@ -1,0 +1,27 @@
+# BasicSeasonTranslationFlow
+
+main: kit: flow: BasicSeasonTranslationFlow:
+{
+  entity: "season_translation",
+  kind: "basic",
+  name: "BasicSeasonTranslationFlow",
+  step: [
+    {
+      m: {
+        season_number: "season_number01",
+        tv_id: "tv01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "season_translation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSeasonTranslationFlow"
+}

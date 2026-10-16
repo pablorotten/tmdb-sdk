@@ -1,0 +1,58 @@
+# Entity: configuration
+
+main: kit: entity: configuration: {
+
+  alias: field: {}
+
+  fields: {
+    change_keys: {
+      h: "Change Keys"
+      n: "change_keys"
+      r: false
+      t: "`$ARRAY`"
+    }
+    images: {
+      h: "Images"
+      n: "images"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "configuration"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/configuration"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/configuration"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "configuration"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

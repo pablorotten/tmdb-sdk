@@ -1,0 +1,101 @@
+# BasicEpisodeFlow
+
+main: kit: flow: BasicEpisodeFlow:
+{
+  entity: "episode",
+  kind: "basic",
+  name: "BasicEpisodeFlow",
+  step: [
+    {
+      i: {
+        ref: "episode_ref01"
+      }
+
+      m: {
+        account_id: "account01",
+        episode_number: "episode_number01",
+        guest_session_id: "guest_session01",
+        season_id: "season01",
+        tv_id: "tv01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        guest_session_id: "guest_session01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "episode_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "episode_ref01",
+        srcdatavar: "episode_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "episode01",
+        season_id: "season01",
+        tv_id: "tv01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-episode_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "episode_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "episode01",
+        season_id: "season01",
+        tv_id: "tv01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        guest_session_id: "guest_session01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "episode_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEpisodeFlow"
+}

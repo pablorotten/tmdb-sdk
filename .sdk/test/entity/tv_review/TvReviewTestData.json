@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "tv_review": {
+      "TV_REVIEW00": {
+        "author": "s46",
+        "author_details": {},
+        "content": "s48",
+        "created_at": "s49",
+        "id": "TV_REVIEW00",
+        "updated_at": "s4b",
+        "url": "s4c"
+      },
+      "TV_REVIEW01": {
+        "author": "s8c",
+        "author_details": {},
+        "content": "s8e",
+        "created_at": "s8f",
+        "id": "TV_REVIEW01",
+        "updated_at": "s91",
+        "url": "s92"
+      },
+      "TV_REVIEW02": {
+        "author": "sd2",
+        "author_details": {},
+        "content": "sd4",
+        "created_at": "sd5",
+        "id": "TV_REVIEW02",
+        "updated_at": "sd7",
+        "url": "sd8"
+      }
+    }
+  },
+  "new": {
+    "tv_review": {
+      "tv_review_ref01": {
+        "author": "s118",
+        "author_details": {},
+        "content": "s11a",
+        "created_at": "s11b",
+        "updated_at": "s11d",
+        "url": "s11e"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/reviews": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

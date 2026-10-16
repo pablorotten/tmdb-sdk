@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "account": {
+      "ACCOUNT00": {
+        "avatar": {},
+        "id": "ACCOUNT00",
+        "include_adult": true,
+        "iso_3166_1": "s49",
+        "iso_639_1": "s4a",
+        "name": "s4b",
+        "username": "s4c"
+      },
+      "ACCOUNT01": {
+        "avatar": {},
+        "id": "ACCOUNT01",
+        "include_adult": true,
+        "iso_3166_1": "s8f",
+        "iso_639_1": "s90",
+        "name": "s91",
+        "username": "s92"
+      },
+      "ACCOUNT02": {
+        "avatar": {},
+        "id": "ACCOUNT02",
+        "include_adult": true,
+        "iso_3166_1": "sd5",
+        "iso_639_1": "sd6",
+        "name": "sd7",
+        "username": "sd8"
+      }
+    }
+  },
+  "new": {
+    "account": {
+      "account_ref01": {
+        "avatar": {},
+        "include_adult": true,
+        "iso_3166_1": "s11b",
+        "iso_639_1": "s11c",
+        "name": "s11d",
+        "username": "s11e"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/account/{account_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

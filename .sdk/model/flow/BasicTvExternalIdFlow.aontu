@@ -1,0 +1,32 @@
+# BasicTvExternalIdFlow
+
+main: kit: flow: BasicTvExternalIdFlow:
+{
+  entity: "tv_external_id",
+  kind: "basic",
+  name: "BasicTvExternalIdFlow",
+  step: [
+    {
+      i: {
+        ref: "tv_external_id_ref01",
+        srcdatavar: "tv_external_id_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tv_external_id01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tv_external_id_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTvExternalIdFlow"
+}

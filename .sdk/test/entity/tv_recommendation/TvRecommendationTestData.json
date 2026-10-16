@@ -1,0 +1,84 @@
+{
+  "existing": {
+    "tv_recommendation": {
+      "TV_RECOMMENDATION00": {
+        "adult": true,
+        "backdrop_path": "s97",
+        "first_air_date": "s98",
+        "genre_ids": [],
+        "id": "TV_RECOMMENDATION00",
+        "media_type": "s9b",
+        "name": "s9c",
+        "origin_country": [],
+        "original_language": "s9e",
+        "original_name": "s9f",
+        "overview": "sa0",
+        "popularity": 161,
+        "poster_path": "sa2",
+        "vote_average": 163,
+        "vote_count": 164
+      },
+      "TV_RECOMMENDATION01": {
+        "adult": true,
+        "backdrop_path": "s12d",
+        "first_air_date": "s12e",
+        "genre_ids": [],
+        "id": "TV_RECOMMENDATION01",
+        "media_type": "s131",
+        "name": "s132",
+        "origin_country": [],
+        "original_language": "s134",
+        "original_name": "s135",
+        "overview": "s136",
+        "popularity": 311,
+        "poster_path": "s138",
+        "vote_average": 313,
+        "vote_count": 314
+      },
+      "TV_RECOMMENDATION02": {
+        "adult": true,
+        "backdrop_path": "s1c3",
+        "first_air_date": "s1c4",
+        "genre_ids": [],
+        "id": "TV_RECOMMENDATION02",
+        "media_type": "s1c7",
+        "name": "s1c8",
+        "origin_country": [],
+        "original_language": "s1ca",
+        "original_name": "s1cb",
+        "overview": "s1cc",
+        "popularity": 461,
+        "poster_path": "s1ce",
+        "vote_average": 463,
+        "vote_count": 464
+      }
+    }
+  },
+  "new": {
+    "tv_recommendation": {
+      "tv_recommendation_ref01": {
+        "adult": true,
+        "backdrop_path": "s259",
+        "first_air_date": "s25a",
+        "genre_ids": [],
+        "media_type": "s25d",
+        "name": "s25e",
+        "origin_country": [],
+        "original_language": "s260",
+        "original_name": "s261",
+        "overview": "s262",
+        "popularity": 611,
+        "poster_path": "s264",
+        "vote_average": 613,
+        "vote_count": 614
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/recommendations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

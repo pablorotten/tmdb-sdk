@@ -1,0 +1,22 @@
+# BasicTopRatedFlow
+
+main: kit: flow: BasicTopRatedFlow:
+{
+  entity: "top_rated",
+  kind: "basic",
+  name: "BasicTopRatedFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "top_rated_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTopRatedFlow"
+}

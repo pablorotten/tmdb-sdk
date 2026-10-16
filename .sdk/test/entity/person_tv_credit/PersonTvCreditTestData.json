@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "person_tv_credit": {
+      "PERSON_TV_CREDIT00": {
+        "cast": [],
+        "crew": [],
+        "id": "PERSON_TV_CREDIT00"
+      },
+      "PERSON_TV_CREDIT01": {
+        "cast": [],
+        "crew": [],
+        "id": "PERSON_TV_CREDIT01"
+      },
+      "PERSON_TV_CREDIT02": {
+        "cast": [],
+        "crew": [],
+        "id": "PERSON_TV_CREDIT02"
+      }
+    }
+  },
+  "new": {
+    "person_tv_credit": {
+      "person_tv_credit_ref01": {
+        "cast": [],
+        "crew": []
+      }
+    }
+  },
+  "requests": {
+    "GET /3/person/{person_id}/tv_credits": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

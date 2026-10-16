@@ -1,0 +1,26 @@
+# BasicMovieImageFlow
+
+main: kit: flow: BasicMovieImageFlow:
+{
+  entity: "movie_image",
+  kind: "basic",
+  name: "BasicMovieImageFlow",
+  step: [
+    {
+      m: {
+        movie_id: "movie01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "movie_image_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieImageFlow"
+}

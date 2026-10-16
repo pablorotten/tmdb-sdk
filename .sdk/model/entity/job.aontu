@@ -1,0 +1,61 @@
+# Entity: job
+
+main: kit: entity: job: {
+
+  alias: field: {}
+
+  fields: {
+    department: {
+      h: "Department"
+      n: "department"
+      r: false
+      t: "`$STRING`"
+    }
+    jobs: {
+      h: "Jobs"
+      n: "jobs"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "job"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/configuration/jobs"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/configuration/jobs"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "configuration"
+            }
+            {
+              lit: "jobs"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

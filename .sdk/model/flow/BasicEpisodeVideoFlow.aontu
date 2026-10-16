@@ -1,0 +1,28 @@
+# BasicEpisodeVideoFlow
+
+main: kit: flow: BasicEpisodeVideoFlow:
+{
+  entity: "episode_video",
+  kind: "basic",
+  name: "BasicEpisodeVideoFlow",
+  step: [
+    {
+      m: {
+        episode_number: "episode_number01",
+        season_id: "season01",
+        tv_id: "tv01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "episode_video_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEpisodeVideoFlow"
+}

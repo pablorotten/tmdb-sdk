@@ -1,0 +1,64 @@
+# Entity: authentication
+
+main: kit: entity: authentication: {
+
+  alias: field: {}
+
+  fields: {
+    status_code: {
+      h: "Status Code"
+      n: "status_code"
+      r: false
+      t: "`$INTEGER`"
+    }
+    status_message: {
+      h: "Status Message"
+      n: "status_message"
+      r: false
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "authentication"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/authentication"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/authentication"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "authentication"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

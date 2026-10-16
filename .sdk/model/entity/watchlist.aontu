@@ -1,0 +1,103 @@
+# Entity: watchlist
+
+main: kit: entity: watchlist: {
+
+  alias: field: {}
+
+  fields: {
+    RAW_BODY: {
+      fo: "json"
+      h: "Raw Body"
+      n: "RAW_BODY"
+      r: true
+      t: "`$STRING`"
+    }
+    status_code: {
+      h: "Status Code"
+      n: "status_code"
+      r: false
+      t: "`$INTEGER`"
+    }
+    status_message: {
+      h: "Status Message"
+      n: "status_message"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "watchlist"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "RAW_BODY"
+          ]
+          co: {
+            id: "POST /3/account/{account_id}/watchlist"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: null
+                k: "param"
+                n: "account_id"
+                or: "account_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/3/account/{account_id}/watchlist"
+          q: {
+            exist: [
+              "account_id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "account"
+            }
+            {
+              var: "account_id"
+            }
+            {
+              lit: "watchlist"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.account")]
+  ]
+
+}

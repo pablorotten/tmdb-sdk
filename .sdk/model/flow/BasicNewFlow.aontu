@@ -1,0 +1,36 @@
+# BasicNewFlow
+
+main: kit: flow: BasicNewFlow:
+{
+  entity: "new",
+  kind: "basic",
+  name: "BasicNewFlow",
+  step: [
+    {
+      i: {
+        ref: "new_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "new_ref01",
+        srcdatavar: "new_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-new_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicNewFlow"
+}

@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "tv_list": {
+      "TV_LIST00": {
+        "description": "s50",
+        "favorite_count": 81,
+        "id": "TV_LIST00",
+        "iso_3166_1": "s53",
+        "iso_639_1": "s54",
+        "item_count": 85,
+        "name": "s56",
+        "poster_path": "s57"
+      },
+      "TV_LIST01": {
+        "description": "sa0",
+        "favorite_count": 161,
+        "id": "TV_LIST01",
+        "iso_3166_1": "sa3",
+        "iso_639_1": "sa4",
+        "item_count": 165,
+        "name": "sa6",
+        "poster_path": "sa7"
+      },
+      "TV_LIST02": {
+        "description": "sf0",
+        "favorite_count": 241,
+        "id": "TV_LIST02",
+        "iso_3166_1": "sf3",
+        "iso_639_1": "sf4",
+        "item_count": 245,
+        "name": "sf6",
+        "poster_path": "sf7"
+      }
+    }
+  },
+  "new": {
+    "tv_list": {
+      "tv_list_ref01": {
+        "description": "s140",
+        "favorite_count": 321,
+        "iso_3166_1": "s143",
+        "iso_639_1": "s144",
+        "item_count": 325,
+        "name": "s146",
+        "poster_path": "s147"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

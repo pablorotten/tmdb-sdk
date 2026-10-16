@@ -1,0 +1,61 @@
+# Entity: timezone
+
+main: kit: entity: timezone: {
+
+  alias: field: {}
+
+  fields: {
+    iso_3166_1: {
+      h: "Iso 3166 1"
+      n: "iso_3166_1"
+      r: false
+      t: "`$STRING`"
+    }
+    zones: {
+      h: "Zones"
+      n: "zones"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "timezone"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/configuration/timezones"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/configuration/timezones"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "configuration"
+            }
+            {
+              lit: "timezones"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

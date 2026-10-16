@@ -1,0 +1,22 @@
+# BasicOnTheAirFlow
+
+main: kit: flow: BasicOnTheAirFlow:
+{
+  entity: "on_the_air",
+  kind: "basic",
+  name: "BasicOnTheAirFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "on_the_air_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOnTheAirFlow"
+}

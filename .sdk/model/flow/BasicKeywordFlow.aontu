@@ -1,0 +1,44 @@
+# BasicKeywordFlow
+
+main: kit: flow: BasicKeywordFlow:
+{
+  entity: "keyword",
+  kind: "basic",
+  name: "BasicKeywordFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "keyword_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "keyword_ref01",
+        srcdatavar: "keyword_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "keyword01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-keyword_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicKeywordFlow"
+}

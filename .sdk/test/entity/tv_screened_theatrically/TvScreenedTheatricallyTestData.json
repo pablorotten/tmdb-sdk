@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "tv_screened_theatrically": {
+      "TV_SCREENED_THEATRICALLY00": {
+        "episode_number": 30,
+        "id": "TV_SCREENED_THEATRICALLY00",
+        "season_number": 32
+      },
+      "TV_SCREENED_THEATRICALLY01": {
+        "episode_number": 60,
+        "id": "TV_SCREENED_THEATRICALLY01",
+        "season_number": 62
+      },
+      "TV_SCREENED_THEATRICALLY02": {
+        "episode_number": 90,
+        "id": "TV_SCREENED_THEATRICALLY02",
+        "season_number": 92
+      }
+    }
+  },
+  "new": {
+    "tv_screened_theatrically": {
+      "tv_screened_theatrically_ref01": {
+        "episode_number": 120,
+        "season_number": 122
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/screened_theatrically": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

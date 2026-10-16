@@ -1,0 +1,119 @@
+# Entity: all
+
+main: kit: entity: all: {
+
+  alias: field: {}
+
+  fields: {
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    page: {
+      h: "Page"
+      n: "page"
+      r: false
+      t: "`$INTEGER`"
+    }
+    results: {
+      h: "Results"
+      n: "results"
+      r: false
+      t: "`$ARRAY`"
+    }
+    total_pages: {
+      h: "Total Pages"
+      n: "total_pages"
+      r: false
+      t: "`$INTEGER`"
+    }
+    total_results: {
+      h: "Total Results"
+      n: "total_results"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "all"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/trending/all/{time_window}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "day"
+                k: "param"
+                n: "id"
+                or: "time_window"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/trending/all/{time_window}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              time_window: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "trending"
+            }
+            {
+              lit: "all"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

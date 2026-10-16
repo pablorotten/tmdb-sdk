@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "list_item_status": {
+      "LIST_ITEM_STATUS00": {
+        "id": "LIST_ITEM_STATUS00",
+        "item_present": false
+      },
+      "LIST_ITEM_STATUS01": {
+        "id": "LIST_ITEM_STATUS01",
+        "item_present": false
+      },
+      "LIST_ITEM_STATUS02": {
+        "id": "LIST_ITEM_STATUS02",
+        "item_present": false
+      }
+    }
+  },
+  "new": {
+    "list_item_status": {
+      "list_item_status_ref01": {
+        "item_present": false
+      }
+    }
+  },
+  "requests": {
+    "GET /3/list/{list_id}/item_status": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "tv_keyword": {
+      "TV_KEYWORD00": {
+        "id": "TV_KEYWORD00",
+        "name": "s15"
+      },
+      "TV_KEYWORD01": {
+        "id": "TV_KEYWORD01",
+        "name": "s29"
+      },
+      "TV_KEYWORD02": {
+        "id": "TV_KEYWORD02",
+        "name": "s3d"
+      }
+    }
+  },
+  "new": {
+    "tv_keyword": {
+      "tv_keyword_ref01": {
+        "name": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/keywords": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

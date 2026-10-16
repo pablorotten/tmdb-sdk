@@ -1,0 +1,26 @@
+# BasicMovieSimilarFlow
+
+main: kit: flow: BasicMovieSimilarFlow:
+{
+  entity: "movie_similar",
+  kind: "basic",
+  name: "BasicMovieSimilarFlow",
+  step: [
+    {
+      m: {
+        movie_id: "movie01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "movie_similar_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMovieSimilarFlow"
+}

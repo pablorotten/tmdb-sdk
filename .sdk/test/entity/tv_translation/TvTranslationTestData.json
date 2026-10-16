@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "tv_translation": {
+      "TV_TRANSLATION00": {
+        "data": {},
+        "english_name": "s3d",
+        "id": "TV_TRANSLATION00",
+        "iso_3166_1": "s3f",
+        "iso_639_1": "s40",
+        "name": "s41"
+      },
+      "TV_TRANSLATION01": {
+        "data": {},
+        "english_name": "s79",
+        "id": "TV_TRANSLATION01",
+        "iso_3166_1": "s7b",
+        "iso_639_1": "s7c",
+        "name": "s7d"
+      },
+      "TV_TRANSLATION02": {
+        "data": {},
+        "english_name": "sb5",
+        "id": "TV_TRANSLATION02",
+        "iso_3166_1": "sb7",
+        "iso_639_1": "sb8",
+        "name": "sb9"
+      }
+    }
+  },
+  "new": {
+    "tv_translation": {
+      "tv_translation_ref01": {
+        "data": {},
+        "english_name": "sf1",
+        "iso_3166_1": "sf3",
+        "iso_639_1": "sf4",
+        "name": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/translations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

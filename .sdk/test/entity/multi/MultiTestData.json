@@ -1,0 +1,92 @@
+{
+  "existing": {
+    "multi": {
+      "MULTI00": {
+        "adult": true,
+        "backdrop_path": "sab",
+        "genre_ids": [],
+        "id": "MULTI00",
+        "media_type": "sae",
+        "name": "saf",
+        "original_language": "sb0",
+        "original_name": "sb1",
+        "original_title": "sb2",
+        "overview": "sb3",
+        "popularity": 180,
+        "poster_path": "sb5",
+        "release_date": "sb6",
+        "title": "sb7",
+        "video": true,
+        "vote_average": 185,
+        "vote_count": 186
+      },
+      "MULTI01": {
+        "adult": true,
+        "backdrop_path": "s155",
+        "genre_ids": [],
+        "id": "MULTI01",
+        "media_type": "s158",
+        "name": "s159",
+        "original_language": "s15a",
+        "original_name": "s15b",
+        "original_title": "s15c",
+        "overview": "s15d",
+        "popularity": 350,
+        "poster_path": "s15f",
+        "release_date": "s160",
+        "title": "s161",
+        "video": true,
+        "vote_average": 355,
+        "vote_count": 356
+      },
+      "MULTI02": {
+        "adult": true,
+        "backdrop_path": "s1ff",
+        "genre_ids": [],
+        "id": "MULTI02",
+        "media_type": "s202",
+        "name": "s203",
+        "original_language": "s204",
+        "original_name": "s205",
+        "original_title": "s206",
+        "overview": "s207",
+        "popularity": 520,
+        "poster_path": "s209",
+        "release_date": "s20a",
+        "title": "s20b",
+        "video": true,
+        "vote_average": 525,
+        "vote_count": 526
+      }
+    }
+  },
+  "new": {
+    "multi": {
+      "multi_ref01": {
+        "adult": true,
+        "backdrop_path": "s2a9",
+        "genre_ids": [],
+        "media_type": "s2ac",
+        "name": "s2ad",
+        "original_language": "s2ae",
+        "original_name": "s2af",
+        "original_title": "s2b0",
+        "overview": "s2b1",
+        "popularity": 690,
+        "poster_path": "s2b3",
+        "release_date": "s2b4",
+        "title": "s2b5",
+        "video": true,
+        "vote_average": 695,
+        "vote_count": 696
+      }
+    }
+  },
+  "requests": {
+    "GET /3/search/multi": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

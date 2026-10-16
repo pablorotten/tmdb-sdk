@@ -1,0 +1,18 @@
+# BasicN4nFlow
+
+main: kit: flow: BasicN4nFlow:
+{
+  entity: "n4n",
+  kind: "basic",
+  name: "BasicN4nFlow",
+  step: [
+    {
+      i: {
+        ref: "n4n_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicN4nFlow"
+}

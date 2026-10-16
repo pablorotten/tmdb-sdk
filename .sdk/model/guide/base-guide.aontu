@@ -1,0 +1,952 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 103
+  metrics: count: path: 148
+  metrics: count: method: 152
+
+  entity: account: {
+    path: "/3/account/{account_id}": {
+      rename: param: "account_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: account_list: {
+    path: "/3/account/{account_id}/lists": {
+      rename: param: "account_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: airing_today: {
+    path: "/3/tv/airing_today": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: all: {
+    path: "/3/trending/all/{time_window}": {
+      rename: param: "time_window": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: authentication: {
+    path: "/3/authentication": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: change: {
+    path: "/3/movie/changes": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/person/changes": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/tv/changes": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: collection: {
+    path: "/3/collection/{collection_id}": {
+      rename: param: "collection_id": *"id"
+      op: load: method: *GET
+    }
+    path: "/3/search/collection": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: collection_image: {
+    path: "/3/collection/{collection_id}/images": {
+      rename: param: "collection_id": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: collection_translation: {
+    path: "/3/collection/{collection_id}/translations": {
+      rename: param: "collection_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.translations`")|top
+    }
+  }
+
+  entity: company: {
+    path: "/3/company/{company_id}": {
+      rename: param: "company_id": *"id"
+      op: load: method: *GET
+    }
+    path: "/3/search/company": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: company_alternative_name: {
+    path: "/3/company/{company_id}/alternative_names": {
+      rename: param: "company_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: company_image: {
+    path: "/3/company/{company_id}/images": {
+      rename: param: "company_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.logos`")|top
+    }
+  }
+
+  entity: configuration: {
+    path: "/3/configuration": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: country: {
+    path: "/3/configuration/countries": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: credit: {
+    path: "/3/credit/{credit_id}": {
+      rename: param: "credit_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: episode: {
+    path: "/3/account/{account_id}/rated/tv/episodes": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/guest_session/{guest_session_id}/rated/tv/episodes": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/tv/{series_id}/season/{season_number}/episode/{episode_number}": {
+      rename: param: "episode_number": *"id"
+      rename: param: "season_number": *"season_id"
+      rename: param: "series_id": *"tv_id"
+      op: load: method: *GET
+    }
+    path: "/3/tv/{series_id}/season/{season_number}/episode/{episode_number}/rating": {
+      action: "rating": {}
+      rename: param: "episode_number": *"id"
+      rename: param: "season_number": *"season_id"
+      rename: param: "series_id": *"tv_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: episode_account_state: {
+    path: "/3/tv/{series_id}/season/{season_number}/episode/{episode_number}/account_states": {
+      rename: param: "season_number": *"season_id"
+      rename: param: "series_id": *"tv_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: episode_change: {
+    path: "/3/tv/episode/{episode_id}/changes": {
+      rename: param: "episode_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.changes`")|top
+    }
+  }
+
+  entity: episode_credit: {
+    path: "/3/tv/{series_id}/season/{season_number}/episode/{episode_number}/credits": {
+      rename: param: "season_number": *"season_id"
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: episode_external_id: {
+    path: "/3/tv/{series_id}/season/{season_number}/episode/{episode_number}/external_ids": {
+      rename: param: "season_number": *"season_id"
+      rename: param: "series_id": *"tv_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: episode_group: {
+    path: "/3/tv/episode_group/{tv_episode_group_id}": {
+      rename: param: "tv_episode_group_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: episode_image: {
+    path: "/3/tv/{series_id}/season/{season_number}/episode/{episode_number}/images": {
+      rename: param: "season_number": *"season_id"
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.stills`")|top
+    }
+  }
+
+  entity: episode_translation: {
+    path: "/3/tv/{series_id}/season/{season_number}/episode/{episode_number}/translations": {
+      rename: param: "season_number": *"season_id"
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.translations`")|top
+    }
+  }
+
+  entity: episode_video: {
+    path: "/3/tv/{series_id}/season/{season_number}/episode/{episode_number}/videos": {
+      rename: param: "season_number": *"season_id"
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: favorite: {
+    path: "/3/account/{account_id}/favorite": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: find: {
+    path: "/3/find/{external_id}": {
+      rename: param: "external_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: job: {
+    path: "/3/configuration/jobs": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: keyword: {
+    path: "/3/keyword/{keyword_id}": {
+      rename: param: "keyword_id": *"id"
+      op: load: method: *GET
+    }
+    path: "/3/search/keyword": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: keyword_movie: {
+    path: "/3/keyword/{keyword_id}/movies": {
+      rename: param: "keyword_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: language: {
+    path: "/3/configuration/languages": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: latest: {
+    path: "/3/movie/latest": {
+      op: list: method: *GET
+    }
+    path: "/3/person/latest": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.also_known_as`")|top
+    }
+    path: "/3/tv/latest": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: list: {
+    path: "/3/certification/movie/list": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.certifications`")|top
+    }
+    path: "/3/certification/tv/list": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.certifications`")|top
+    }
+    path: "/3/genre/movie/list": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.genres`")|top
+    }
+    path: "/3/genre/tv/list": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.genres`")|top
+    }
+    path: "/3/list": {
+      op: create: method: *POST
+    }
+    path: "/3/list/{list_id}": {
+      rename: param: "list_id": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+    path: "/3/list/{list_id}/add_item": {
+      action: "add_item": {}
+      rename: param: "list_id": *"id"
+      op: create: method: *POST
+    }
+    path: "/3/list/{list_id}/clear": {
+      action: "clear": {}
+      rename: param: "list_id": *"id"
+      op: create: method: *POST
+    }
+    path: "/3/list/{list_id}/remove_item": {
+      action: "remove_item": {}
+      rename: param: "list_id": *"id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: list_item_status: {
+    path: "/3/list/{list_id}/item_status": {
+      rename: param: "list_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: movie: {
+    path: "/3/account/{account_id}/favorite/movies": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/account/{account_id}/rated/movies": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/account/{account_id}/watchlist/movies": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/discover/movie": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/guest_session/{guest_session_id}/rated/movies": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/movie/{movie_id}": {
+      rename: param: "movie_id": *"id"
+      op: load: method: *GET
+    }
+    path: "/3/movie/{movie_id}/rating": {
+      action: "rating": {}
+      rename: param: "movie_id": *"id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/3/search/movie": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/trending/movie/{time_window}": {
+      rename: param: "time_window": *"id"
+      op: load: method: *GET
+    }
+    path: "/3/watch/providers/movie": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: movie_account_state: {
+    path: "/3/movie/{movie_id}/account_states": {
+      rename: param: "movie_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: movie_alternative_title: {
+    path: "/3/movie/{movie_id}/alternative_titles": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.titles`")|top
+    }
+  }
+
+  entity: movie_change: {
+    path: "/3/movie/{movie_id}/changes": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.changes`")|top
+    }
+  }
+
+  entity: movie_credit: {
+    path: "/3/movie/{movie_id}/credits": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: movie_external_id: {
+    path: "/3/movie/{movie_id}/external_ids": {
+      rename: param: "movie_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: movie_image: {
+    path: "/3/movie/{movie_id}/images": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: movie_keyword: {
+    path: "/3/movie/{movie_id}/keywords": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.keywords`")|top
+    }
+  }
+
+  entity: movie_list: {
+    path: "/3/movie/{movie_id}/lists": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: movie_recommendation: {
+    path: "/3/movie/{movie_id}/recommendations": {
+      rename: param: "movie_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: movie_release_date: {
+    path: "/3/movie/{movie_id}/release_dates": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: movie_review: {
+    path: "/3/movie/{movie_id}/reviews": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: movie_similar: {
+    path: "/3/movie/{movie_id}/similar": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: movie_translation: {
+    path: "/3/movie/{movie_id}/translations": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.translations`")|top
+    }
+  }
+
+  entity: movie_video: {
+    path: "/3/movie/{movie_id}/videos": {
+      rename: param: "movie_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: multi: {
+    path: "/3/search/multi": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: n4n: {
+    path: "/3/authentication/session/convert/4": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: network: {
+    path: "/3/network/{network_id}": {
+      rename: param: "network_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: network_alternative_name: {
+    path: "/3/network/{network_id}/alternative_names": {
+      rename: param: "network_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: network_image: {
+    path: "/3/network/{network_id}/images": {
+      rename: param: "network_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.logos`")|top
+    }
+  }
+
+  entity: new: {
+    path: "/3/authentication/guest_session/new": {
+      op: load: method: *GET
+    }
+    path: "/3/authentication/session/new": {
+      op: create: method: *POST
+    }
+    path: "/3/authentication/token/new": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: now_playing: {
+    path: "/3/movie/now_playing": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: on_the_air: {
+    path: "/3/tv/on_the_air": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: person: {
+    path: "/3/person/{person_id}": {
+      rename: param: "person_id": *"id"
+      op: load: method: *GET
+    }
+    path: "/3/search/person": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/trending/person/{time_window}": {
+      rename: param: "time_window": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: person_change: {
+    path: "/3/person/{person_id}/changes": {
+      rename: param: "person_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.changes`")|top
+    }
+  }
+
+  entity: person_combined_credit: {
+    path: "/3/person/{person_id}/combined_credits": {
+      rename: param: "person_id": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: person_external_id: {
+    path: "/3/person/{person_id}/external_ids": {
+      rename: param: "person_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: person_image: {
+    path: "/3/person/{person_id}/images": {
+      rename: param: "person_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.profiles`")|top
+    }
+  }
+
+  entity: person_movie_credit: {
+    path: "/3/person/{person_id}/movie_credits": {
+      rename: param: "person_id": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: person_tagged_image: {
+    path: "/3/person/{person_id}/tagged_images": {
+      rename: param: "person_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: person_translation: {
+    path: "/3/person/{person_id}/translations": {
+      rename: param: "person_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.translations`")|top
+    }
+  }
+
+  entity: person_tv_credit: {
+    path: "/3/person/{person_id}/tv_credits": {
+      rename: param: "person_id": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: popular: {
+    path: "/3/movie/popular": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/person/popular": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/tv/popular": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: primary_translation: {
+    path: "/3/configuration/primary_translations": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: provider: {
+    path: "/3/movie/{movie_id}/watch/providers": {
+      op: load: method: *GET
+    }
+    path: "/3/tv/{series_id}/season/{season_number}/watch/providers": {
+      rename: param: "season_number": *"season_id"
+      rename: param: "series_id": *"tv_id"
+      op: load: method: *GET
+    }
+    path: "/3/tv/{series_id}/watch/providers": {
+      rename: param: "series_id": *"tv_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: region: {
+    path: "/3/watch/providers/regions": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: review: {
+    path: "/3/review/{review_id}": {
+      rename: param: "review_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: season: {
+    path: "/3/tv/{series_id}/season/{season_number}": {
+      rename: param: "season_number": *"id"
+      rename: param: "series_id": *"tv_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: season_account_state: {
+    path: "/3/tv/{series_id}/season/{season_number}/account_states": {
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: season_aggregate_credit: {
+    path: "/3/tv/{series_id}/season/{season_number}/aggregate_credits": {
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: season_change: {
+    path: "/3/tv/season/{season_id}/changes": {
+      rename: param: "season_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.changes`")|top
+    }
+  }
+
+  entity: season_credit: {
+    path: "/3/tv/{series_id}/season/{season_number}/credits": {
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: season_external_id: {
+    path: "/3/tv/{series_id}/season/{season_number}/external_ids": {
+      rename: param: "series_id": *"tv_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: season_image: {
+    path: "/3/tv/{series_id}/season/{season_number}/images": {
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.posters`")|top
+    }
+  }
+
+  entity: season_translation: {
+    path: "/3/tv/{series_id}/season/{season_number}/translations": {
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.translations`")|top
+    }
+  }
+
+  entity: season_video: {
+    path: "/3/tv/{series_id}/season/{season_number}/videos": {
+      rename: param: "series_id": *"tv_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: session: {
+    path: "/3/authentication/session": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: timezone: {
+    path: "/3/configuration/timezones": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: top_rated: {
+    path: "/3/movie/top_rated": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/tv/top_rated": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_account_state: {
+    path: "/3/tv/{series_id}/account_states": {
+      rename: param: "series_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: tv_aggregate_credit: {
+    path: "/3/tv/{series_id}/aggregate_credits": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: tv_alternative_title: {
+    path: "/3/tv/{series_id}/alternative_titles": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_change: {
+    path: "/3/tv/{series_id}/changes": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.changes`")|top
+    }
+  }
+
+  entity: tv_content_rating: {
+    path: "/3/tv/{series_id}/content_ratings": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_credit: {
+    path: "/3/tv/{series_id}/credits": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: tv_episode_group: {
+    path: "/3/tv/{series_id}/episode_groups": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_external_id: {
+    path: "/3/tv/{series_id}/external_ids": {
+      rename: param: "series_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: tv_image: {
+    path: "/3/tv/{series_id}/images": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: tv_keyword: {
+    path: "/3/tv/{series_id}/keywords": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_list: {
+    path: "/3/tv/{series_id}/lists": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_recommendation: {
+    path: "/3/tv/{series_id}/recommendations": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_review: {
+    path: "/3/tv/{series_id}/reviews": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_screened_theatrically: {
+    path: "/3/tv/{series_id}/screened_theatrically": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_similar: {
+    path: "/3/tv/{series_id}/similar": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tv_translation: {
+    path: "/3/tv/{series_id}/translations": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.translations`")|top
+    }
+  }
+
+  entity: tv_video: {
+    path: "/3/tv/{series_id}/videos": {
+      rename: param: "series_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: tvn: {
+    path: "/3/account/{account_id}/favorite/tv": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/account/{account_id}/rated/tv": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/account/{account_id}/watchlist/tv": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/discover/tv": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/guest_session/{guest_session_id}/rated/tv": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/search/tv": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+    path: "/3/trending/tv/{time_window}": {
+      op: load: method: *GET
+    }
+    path: "/3/tv/{series_id}": {
+      op: load: method: *GET
+    }
+    path: "/3/tv/{series_id}/rating": {
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/3/watch/providers/tv": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: upcoming: {
+    path: "/3/movie/upcoming": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.results`")|top
+    }
+  }
+
+  entity: validate_with_login: {
+    path: "/3/authentication/token/validate_with_login": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: watchlist: {
+    path: "/3/account/{account_id}/watchlist": {
+      op: create: method: *POST
+    }
+  }
+
+}

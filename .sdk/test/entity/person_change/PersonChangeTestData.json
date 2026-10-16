@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "person_change": {
+      "PERSON_CHANGE00": {
+        "id": "PERSON_CHANGE00",
+        "items": [],
+        "key": "s20"
+      },
+      "PERSON_CHANGE01": {
+        "id": "PERSON_CHANGE01",
+        "items": [],
+        "key": "s3e"
+      },
+      "PERSON_CHANGE02": {
+        "id": "PERSON_CHANGE02",
+        "items": [],
+        "key": "s5c"
+      }
+    }
+  },
+  "new": {
+    "person_change": {
+      "person_change_ref01": {
+        "items": [],
+        "key": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /3/person/{person_id}/changes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,150 @@
+# Entity: episode_account_state
+
+main: kit: entity: episode_account_state: {
+
+  alias: field: {}
+
+  fields: {
+    favorite: {
+      h: "Favorite"
+      n: "favorite"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    rated: {
+      h: "Rated"
+      n: "rated"
+      r: false
+      t: "`$OBJECT`"
+    }
+    watchlist: {
+      h: "Watchlist"
+      n: "watchlist"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "episode_account_state"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/account_states"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "episode_number"
+                or: "episode_number"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "param"
+                n: "season_id"
+                or: "season_number"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "param"
+                n: "tv_id"
+                or: "series_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "guest_session_id"
+                or: "guest_session_id"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/{series_id}/season/{season_number}/episode/{episode_number}/account_states"
+          q: {
+            exist: [
+              "episode_number"
+              "season_id"
+              "tv_id"
+            ]
+          }
+          r: {
+            param: {
+              season_number: "season_id"
+              series_id: "tv_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              var: "tv_id"
+            }
+            {
+              lit: "season"
+            }
+            {
+              var: "season_id"
+            }
+            {
+              lit: "episode"
+            }
+            {
+              var: "episode_number"
+            }
+            {
+              lit: "account_states"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.season") path("$.main.kit.entity.episode")]
+  ]
+
+}

@@ -1,0 +1,49 @@
+{
+  "existing": {
+    "episode_account_state": {
+      "EPISODE_ACCOUNT_STATE00": {
+        "favorite": true,
+        "id": "EPISODE_ACCOUNT_STATE00",
+        "rated": {},
+        "watchlist": false,
+        "episode_number": "EPISODE_NUMBER01",
+        "season_id": "SEASON01",
+        "tv_id": "TV01"
+      },
+      "EPISODE_ACCOUNT_STATE01": {
+        "favorite": true,
+        "id": "EPISODE_ACCOUNT_STATE01",
+        "rated": {},
+        "watchlist": false,
+        "episode_number": "EPISODE_NUMBER01",
+        "season_id": "SEASON01",
+        "tv_id": "TV01"
+      },
+      "EPISODE_ACCOUNT_STATE02": {
+        "favorite": true,
+        "id": "EPISODE_ACCOUNT_STATE02",
+        "rated": {},
+        "watchlist": false,
+        "episode_number": "EPISODE_NUMBER01",
+        "season_id": "SEASON01",
+        "tv_id": "TV01"
+      }
+    }
+  },
+  "new": {
+    "episode_account_state": {
+      "episode_account_state_ref01": {
+        "favorite": true,
+        "rated": {},
+        "watchlist": false
+      }
+    }
+  },
+  "requests": {
+    "GET /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/account_states": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+# Entity: episode_change
+
+main: kit: entity: episode_change: {
+
+  alias: field: {}
+
+  fields: {
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    items: {
+      h: "Items"
+      n: "items"
+      r: false
+      t: "`$ARRAY`"
+    }
+    key: {
+      h: "Key"
+      n: "key"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "episode_change"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/tv/episode/{episode_id}/changes"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "episode_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/tv/episode/{episode_id}/changes"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              episode_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              lit: "episode"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "changes"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.changes`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

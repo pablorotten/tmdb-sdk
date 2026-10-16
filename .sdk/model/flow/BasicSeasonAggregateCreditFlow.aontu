@@ -1,0 +1,27 @@
+# BasicSeasonAggregateCreditFlow
+
+main: kit: flow: BasicSeasonAggregateCreditFlow:
+{
+  entity: "season_aggregate_credit",
+  kind: "basic",
+  name: "BasicSeasonAggregateCreditFlow",
+  step: [
+    {
+      m: {
+        season_number: "season_number01",
+        tv_id: "tv01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "season_aggregate_credit_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSeasonAggregateCreditFlow"
+}

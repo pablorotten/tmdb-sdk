@@ -1,0 +1,114 @@
+{
+  "existing": {
+    "person": {
+      "PERSON00": {
+        "adult": true,
+        "also_known_as": [],
+        "biography": "sca",
+        "birthday": "scb",
+        "deathday": "scc",
+        "gender": 205,
+        "homepage": "sce",
+        "id": "PERSON00",
+        "imdb_id": "IMDB01",
+        "known_for": [],
+        "known_for_department": "sd2",
+        "name": "sd3",
+        "original_name": "sd4",
+        "page": 213,
+        "place_of_birth": "sd6",
+        "popularity": 215,
+        "profile_path": "sd8",
+        "results": [],
+        "total_pages": 218,
+        "total_results": 219
+      },
+      "PERSON01": {
+        "adult": true,
+        "also_known_as": [],
+        "biography": "s192",
+        "birthday": "s193",
+        "deathday": "s194",
+        "gender": 405,
+        "homepage": "s196",
+        "id": "PERSON01",
+        "imdb_id": "IMDB01",
+        "known_for": [],
+        "known_for_department": "s19a",
+        "name": "s19b",
+        "original_name": "s19c",
+        "page": 413,
+        "place_of_birth": "s19e",
+        "popularity": 415,
+        "profile_path": "s1a0",
+        "results": [],
+        "total_pages": 418,
+        "total_results": 419
+      },
+      "PERSON02": {
+        "adult": true,
+        "also_known_as": [],
+        "biography": "s25a",
+        "birthday": "s25b",
+        "deathday": "s25c",
+        "gender": 605,
+        "homepage": "s25e",
+        "id": "PERSON02",
+        "imdb_id": "IMDB01",
+        "known_for": [],
+        "known_for_department": "s262",
+        "name": "s263",
+        "original_name": "s264",
+        "page": 613,
+        "place_of_birth": "s266",
+        "popularity": 615,
+        "profile_path": "s268",
+        "results": [],
+        "total_pages": 618,
+        "total_results": 619
+      }
+    }
+  },
+  "new": {
+    "person": {
+      "person_ref01": {
+        "adult": true,
+        "also_known_as": [],
+        "biography": "s322",
+        "birthday": "s323",
+        "deathday": "s324",
+        "gender": 805,
+        "homepage": "s326",
+        "imdb_id": "IMDB01",
+        "known_for": [],
+        "known_for_department": "s32a",
+        "name": "s32b",
+        "original_name": "s32c",
+        "page": 813,
+        "place_of_birth": "s32e",
+        "popularity": 815,
+        "profile_path": "s330",
+        "results": [],
+        "total_pages": 818,
+        "total_results": 819
+      }
+    }
+  },
+  "requests": {
+    "GET /3/search/person": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/person/{person_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /3/trending/person/{time_window}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

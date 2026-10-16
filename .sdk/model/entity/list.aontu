@@ -1,0 +1,930 @@
+# Entity: list
+
+main: kit: entity: list: {
+
+  alias: field: {}
+
+  fields: {
+    AR: {
+      h: "Ar"
+      n: "AR"
+      r: false
+      t: "`$ARRAY`"
+    }
+    AU: {
+      h: "Au"
+      n: "AU"
+      r: false
+      t: "`$ARRAY`"
+    }
+    BG: {
+      h: "Bg"
+      n: "BG"
+      r: false
+      t: "`$ARRAY`"
+    }
+    BR: {
+      h: "Br"
+      n: "BR"
+      r: false
+      t: "`$ARRAY`"
+    }
+    CA: {
+      h: "Ca"
+      n: "CA"
+      r: false
+      t: "`$ARRAY`"
+    }
+    CAQC: {
+      h: "Caqc"
+      n: "CAQC"
+      r: false
+      t: "`$ARRAY`"
+    }
+    CH: {
+      h: "Ch"
+      n: "CH"
+      r: false
+      t: "`$ARRAY`"
+    }
+    DE: {
+      h: "De"
+      n: "DE"
+      r: false
+      t: "`$ARRAY`"
+    }
+    DK: {
+      h: "Dk"
+      n: "DK"
+      r: false
+      t: "`$ARRAY`"
+    }
+    ES: {
+      h: "Es"
+      n: "ES"
+      r: false
+      t: "`$ARRAY`"
+    }
+    FI: {
+      h: "Fi"
+      n: "FI"
+      r: false
+      t: "`$ARRAY`"
+    }
+    FR: {
+      h: "Fr"
+      n: "FR"
+      r: false
+      t: "`$ARRAY`"
+    }
+    GB: {
+      h: "Gb"
+      n: "GB"
+      r: false
+      t: "`$ARRAY`"
+    }
+    GR: {
+      h: "Gr"
+      n: "GR"
+      r: false
+      t: "`$ARRAY`"
+    }
+    HK: {
+      h: "Hk"
+      n: "HK"
+      r: false
+      t: "`$ARRAY`"
+    }
+    HU: {
+      h: "Hu"
+      n: "HU"
+      r: false
+      t: "`$ARRAY`"
+    }
+    ID: {
+      h: "Id"
+      n: "ID"
+      r: false
+      t: "`$ARRAY`"
+    }
+    IE: {
+      h: "Ie"
+      n: "IE"
+      r: false
+      t: "`$ARRAY`"
+    }
+    IL: {
+      h: "Il"
+      n: "IL"
+      r: false
+      t: "`$ARRAY`"
+    }
+    IN: {
+      h: "In"
+      n: "IN"
+      r: false
+      t: "`$ARRAY`"
+    }
+    IT: {
+      h: "It"
+      n: "IT"
+      r: false
+      t: "`$ARRAY`"
+    }
+    JP: {
+      h: "Jp"
+      n: "JP"
+      r: false
+      t: "`$ARRAY`"
+    }
+    KR: {
+      h: "Kr"
+      n: "KR"
+      r: false
+      t: "`$ARRAY`"
+    }
+    LT: {
+      h: "Lt"
+      n: "LT"
+      r: false
+      t: "`$ARRAY`"
+    }
+    LU: {
+      h: "Lu"
+      n: "LU"
+      r: false
+      t: "`$ARRAY`"
+    }
+    LV: {
+      h: "Lv"
+      n: "LV"
+      r: false
+      t: "`$ARRAY`"
+    }
+    MA: {
+      h: "Ma"
+      n: "MA"
+      r: false
+      t: "`$ARRAY`"
+    }
+    MO: {
+      h: "Mo"
+      n: "MO"
+      r: false
+      t: "`$ARRAY`"
+    }
+    MX: {
+      h: "Mx"
+      n: "MX"
+      r: false
+      t: "`$ARRAY`"
+    }
+    MY: {
+      h: "My"
+      n: "MY"
+      r: false
+      t: "`$ARRAY`"
+    }
+    NL: {
+      h: "Nl"
+      n: "NL"
+      r: false
+      t: "`$ARRAY`"
+    }
+    NO: {
+      h: "No"
+      n: "NO"
+      r: false
+      t: "`$ARRAY`"
+    }
+    NZ: {
+      h: "Nz"
+      n: "NZ"
+      r: false
+      t: "`$ARRAY`"
+    }
+    PH: {
+      h: "Ph"
+      n: "PH"
+      r: false
+      t: "`$ARRAY`"
+    }
+    PL: {
+      h: "Pl"
+      n: "PL"
+      r: false
+      t: "`$ARRAY`"
+    }
+    PR: {
+      h: "Pr"
+      n: "PR"
+      r: false
+      t: "`$ARRAY`"
+    }
+    PT: {
+      h: "Pt"
+      n: "PT"
+      r: false
+      t: "`$ARRAY`"
+    }
+    RAW_BODY: {
+      fo: "json"
+      h: "Raw Body"
+      n: "RAW_BODY"
+      r: true
+      t: "`$STRING`"
+    }
+    RU: {
+      h: "Ru"
+      n: "RU"
+      r: false
+      t: "`$ARRAY`"
+    }
+    SE: {
+      h: "Se"
+      n: "SE"
+      r: false
+      t: "`$ARRAY`"
+    }
+    SG: {
+      h: "Sg"
+      n: "SG"
+      r: false
+      t: "`$ARRAY`"
+    }
+    SK: {
+      h: "Sk"
+      n: "SK"
+      r: false
+      t: "`$ARRAY`"
+    }
+    TH: {
+      h: "Th"
+      n: "TH"
+      r: false
+      t: "`$ARRAY`"
+    }
+    TR: {
+      h: "Tr"
+      n: "TR"
+      r: false
+      t: "`$ARRAY`"
+    }
+    TW: {
+      h: "Tw"
+      n: "TW"
+      r: false
+      t: "`$ARRAY`"
+    }
+    US: {
+      h: "Us"
+      n: "US"
+      r: false
+      t: "`$ARRAY`"
+    }
+    VI: {
+      h: "Vi"
+      n: "VI"
+      r: false
+      t: "`$ARRAY`"
+    }
+    ZA: {
+      h: "Za"
+      n: "ZA"
+      r: false
+      t: "`$ARRAY`"
+    }
+    created_by: {
+      h: "Created By"
+      n: "created_by"
+      r: false
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    favorite_count: {
+      h: "Favorite Count"
+      n: "favorite_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    iso_639_1: {
+      h: "Iso 639 1"
+      n: "iso_639_1"
+      r: false
+      t: "`$STRING`"
+    }
+    item_count: {
+      h: "Item Count"
+      n: "item_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    items: {
+      h: "Items"
+      n: "items"
+      r: false
+      t: "`$ARRAY`"
+    }
+    list_id: {
+      h: "List Id"
+      n: "list_id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    poster_path: {
+      h: "Poster Path"
+      n: "poster_path"
+      r: false
+      t: "`$STRING`"
+    }
+    status_code: {
+      h: "Status Code"
+      n: "status_code"
+      r: false
+      t: "`$INTEGER`"
+    }
+    status_message: {
+      h: "Status Message"
+      n: "status_message"
+      r: false
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "list"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /3/list/{list_id}/clear"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "list_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                ex: false
+                k: "query"
+                n: "confirm"
+                or: "confirm"
+                r: true
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/3/list/{list_id}/clear"
+          q: {
+            "$action": "clear"
+            exist: [
+              "confirm"
+              "id"
+              "session_id"
+            ]
+          }
+          r: {
+            param: {
+              list_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "list"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "clear"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "RAW_BODY"
+          ]
+          co: {
+            id: "POST /3/list/{list_id}/add_item"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "list_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/3/list/{list_id}/add_item"
+          q: {
+            "$action": "add_item"
+            exist: [
+              "id"
+              "session_id"
+            ]
+          }
+          r: {
+            param: {
+              list_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "list"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "add_item"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "RAW_BODY"
+          ]
+          co: {
+            id: "POST /3/list/{list_id}/remove_item"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "list_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/3/list/{list_id}/remove_item"
+          q: {
+            "$action": "remove_item"
+            exist: [
+              "id"
+              "session_id"
+            ]
+          }
+          r: {
+            param: {
+              list_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "list"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "remove_item"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "RAW_BODY"
+          ]
+          co: {
+            id: "POST /3/list"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/3/list"
+          q: {
+            exist: [
+              "session_id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "list"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/genre/movie/list"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "en"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/genre/movie/list"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "genre"
+            }
+            {
+              lit: "movie"
+            }
+            {
+              lit: "list"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.genres`"
+          }
+        }
+        {
+          co: {
+            id: "GET /3/genre/tv/list"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "en"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/genre/tv/list"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "genre"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              lit: "list"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.genres`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/list/{list_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "list_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/list/{list_id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              list_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "list"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /3/certification/movie/list"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/certification/movie/list"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "certification"
+            }
+            {
+              lit: "movie"
+            }
+            {
+              lit: "list"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.certifications`"
+          }
+        }
+        {
+          co: {
+            id: "GET /3/certification/tv/list"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/3/certification/tv/list"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "certification"
+            }
+            {
+              lit: "tv"
+            }
+            {
+              lit: "list"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.certifications`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /3/list/{list_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "list_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "session_id"
+                or: "session_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/3/list/{list_id}"
+          q: {
+            exist: [
+              "id"
+              "session_id"
+            ]
+          }
+          r: {
+            param: {
+              list_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "list"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

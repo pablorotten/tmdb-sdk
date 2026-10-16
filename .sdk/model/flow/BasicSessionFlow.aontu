@@ -1,0 +1,9 @@
+# BasicSessionFlow
+
+main: kit: flow: BasicSessionFlow:
+{
+  entity: "session",
+  kind: "basic",
+  name: "BasicSessionFlow",
+  "key$": "BasicSessionFlow"
+}

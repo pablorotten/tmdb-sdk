@@ -1,0 +1,129 @@
+# Entity: find
+
+main: kit: entity: find: {
+
+  alias: field: {}
+
+  fields: {
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    movie_results: {
+      h: "Movie Results"
+      n: "movie_results"
+      r: false
+      t: "`$ARRAY`"
+    }
+    person_results: {
+      h: "Person Results"
+      n: "person_results"
+      r: false
+      t: "`$ARRAY`"
+    }
+    tv_episode_results: {
+      h: "Tv Episode Results"
+      n: "tv_episode_results"
+      r: false
+      t: "`$ARRAY`"
+    }
+    tv_results: {
+      h: "Tv Results"
+      n: "tv_results"
+      r: false
+      t: "`$ARRAY`"
+    }
+    tv_season_results: {
+      h: "Tv Season Results"
+      n: "tv_season_results"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "find"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/find/{external_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "external_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "external_source"
+                or: "external_source"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/find/{external_id}"
+          q: {
+            exist: [
+              "external_source"
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              external_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "find"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

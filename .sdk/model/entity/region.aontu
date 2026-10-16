@@ -1,0 +1,82 @@
+# Entity: region
+
+main: kit: entity: region: {
+
+  alias: field: {}
+
+  fields: {
+    english_name: {
+      h: "English Name"
+      n: "english_name"
+      r: false
+      t: "`$STRING`"
+    }
+    iso_3166_1: {
+      h: "Iso 3166 1"
+      n: "iso_3166_1"
+      r: false
+      t: "`$STRING`"
+    }
+    native_name: {
+      h: "Native Name"
+      n: "native_name"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "region"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/watch/providers/regions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "en-US"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/watch/providers/regions"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "watch"
+            }
+            {
+              lit: "providers"
+            }
+            {
+              lit: "regions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}
