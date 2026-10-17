@@ -1,13 +1,22 @@
 {
+  "NAME": "TMDB",
+  "Name": "Tmdb",
   "def": "tmdb-api.json",
   "main": {
+    "api": {
+      "entity": {},
+      "guide": {}
+    },
+    "custom": {
+      "plurals": {}
+    },
     "def": {
       "desc": ""
     },
     "kit": {
       "author": {
-        "name": "",
-        "url": ""
+        "name": "Pablo Antonio Rodriguez Rubio",
+        "url": "https://github.com/pablorotten"
       },
       "config": {
         "docs_order": [
@@ -22456,13 +22465,13 @@
         }
       },
       "publisher": {
-        "name": "",
-        "security": "",
-        "url": ""
+        "name": "Pablo Antonio Rodriguez Rubio",
+        "security": "pablorottendev@gmail.com",
+        "url": "https://github.com/pablorotten"
       },
       "repo": {
         "host": "github.com",
-        "path": ""
+        "path": "pablorotten/tmdb-sdk"
       },
       "target": {
         "ts": {
@@ -22517,7 +22526,7 @@
             "registry": {
               "active": false,
               "name": "npm",
-              "package": "",
+              "package": "pablorotten-tmdb-sdk",
               "state": "pending",
               "url": "https://registry.npmjs.org",
               "vault": {
@@ -22559,15 +22568,18 @@
         "about_md": "",
         "docs_url": "",
         "entity_desc": {},
-        "homepage": "",
-        "meta_source": "",
-        "summary": "",
+        "homepage": "https://github.com/pablorotten/tmdb-sdk",
+        "meta_source": "https://developer.themoviedb.org/openapi/tmdb-api.json",
+        "summary": "Unofficial client for The Movie Database (TMDB) API, generated from its OpenAPI specification.",
         "tagline": "",
-        "title": "",
-        "website": ""
+        "title": "TMDB API",
+        "website": "https://www.themoviedb.org/"
       }
     }
   },
   "name": "tmdb",
+  "name-": "tmdb",
+  "name_": "tmdb",
+  "name__orig": "tmdb",
   "origin": "voxgig-sdk"
 }

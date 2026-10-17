@@ -122,7 +122,7 @@ create-sdkgen tmdb -d ./tmdb-api.json -o ./tmdb-sdk
 
 # 2. Add the languages you want + offline test mode
 cd tmdb-sdk/.sdk
-npx voxgig-sdkgen target add ts py go
+npx voxgig-sdkgen target add ts
 npx voxgig-sdkgen feature add test
 
 # 3. Generate the SDKs (builds the .sdk sources, then runs the generator)
@@ -228,6 +228,15 @@ search hits: 20 | first: Fight Club
 PS C:\Users\pablo\DEV\projects\tmdb-sdk\ts
 ```
 
+### Ownership and package metadata
+
+The generated repository initially attributed the MIT copyright and npm package author to Voxgig. Its package name used the `@voxgig-sdk` scope, and its repository, issue, publishing, and installation links pointed to `voxgig-sdk/tmdb-sdk`, not my repository. 
+
+I handled project ownership and the remaining generated-file fixes in three stages:
+
+1. **Set project metadata in `.sdk/model/project.aontu`.** I set the publisher and author to my name, the repository path to `pablorotten/tmdb-sdk`, a personal package name, and the project-facing title and links. This is the source-of-truth configuration that is preserved across regeneration.
+2. **Regenerate from `.sdk` with `npm run generate` in WSL.** The generated licenses, package metadata, README attribution, security policy, and npm publishing workflow then reflected my repository and ownership.
+3. **Apply a few project-specific documentation fixes after generation.** I documented that TMDB tokens need the `Bearer ` prefix, corrected the TypeScript README's tag/install reference, aligned `package-lock.json`, and clarified the security policy scope. These edits are in generated output and could be overwritten by a future regeneration; durable generator changes belong in the model or templates.
 
 ## Conclusion
 

@@ -1,22 +1,21 @@
 {
-  "name": "@voxgig-sdk/tmdb-sdk",
+  "name": "pablorotten-tmdb-sdk",
   "version": "0.0.1",
-  "description": "Unofficial generated TypeScript SDK for the tmdb- public API. Not affiliated with or endorsed by the upstream API provider.",
+  "description": "Unofficial generated TypeScript SDK for the TMDB public API. Not affiliated with or endorsed by the upstream API provider.",
   "keywords": [
-    "voxgig",
     "sdk",
     "generated-sdk",
     "openapi",
     "api-client",
     "tmdb"
   ],
-  "homepage": "https://github.com/voxgig-sdk/tmdb-sdk#readme",
+  "homepage": "https://github.com/pablorotten/tmdb-sdk#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/voxgig-sdk/tmdb-sdk.git"
+    "url": "git+https://github.com/pablorotten/tmdb-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/voxgig-sdk/tmdb-sdk/issues"
+    "url": "https://github.com/pablorotten/tmdb-sdk/issues"
   },
   "main": "dist/TmdbSDK.js",
   "type": "commonjs",
@@ -42,8 +41,8 @@
     "reset": "npm run clean && npm i && npm run build && npm test"
   },
   "author": {
-    "name": "Voxgig",
-    "url": "https://voxgig.com"
+    "name": "Pablo Antonio Rodriguez Rubio",
+    "url": "https://github.com/pablorotten"
   },
   "license": "MIT",
   "engines": {

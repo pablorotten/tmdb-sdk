@@ -23,3 +23,28 @@
 # A published package name that does not follow the derivation:
 #
 #   main: kit: target: ts: publish: registry: package: '@scope/name'
+
+main: kit: repo: {
+  host: 'github.com'
+  path: 'pablorotten/tmdb-sdk'
+}
+
+main: kit: publisher: {
+  name: 'Pablo Antonio Rodriguez Rubio'
+  url: 'https://github.com/pablorotten'
+  security: 'pablorottendev@gmail.com'
+}
+
+main: kit: author: {
+  name: 'Pablo Antonio Rodriguez Rubio'
+  url: 'https://github.com/pablorotten'
+}
+
+main: kit: text: {
+  title: 'TMDB API'
+  summary: 'Unofficial client for The Movie Database (TMDB) API, generated from its OpenAPI specification.'
+  website: 'https://www.themoviedb.org/'
+  homepage: 'https://github.com/pablorotten/tmdb-sdk'
+}
+
+main: kit: target: ts: publish: registry: package: 'pablorotten-tmdb-sdk'

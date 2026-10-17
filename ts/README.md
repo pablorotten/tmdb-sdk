@@ -1,8 +1,8 @@
-# Tmdb TypeScript SDK
+# TMDB TypeScript SDK
 
 
 
-The TypeScript SDK for the Tmdb API — a type-safe, entity-oriented client with full async/await support.
+The TypeScript SDK for the TMDB API — a type-safe, entity-oriented client with full async/await support.
 
 The API is exposed as capitalised, semantic **Entities** — e.g.
 `client.Account()` — each with a small set of operations (`list`, `load`, `create`, `remove`)
@@ -12,31 +12,33 @@ predictable and low-friction for both humans and AI agents.
 
 ## Install
 This package is not yet published to npm. Install it from the GitHub
-release tag (`ts/vX.Y.Z`, see [Tags](https://github.com/voxgig-sdk/tmdb-sdk/tags)), or from a
+release tag (`vX.Y.Z`, see [Tags](https://github.com/pablorotten/tmdb-sdk/tags)), or from a
 clone, which carries the compiled `dist/`:
 
 ```bash
-git clone https://github.com/voxgig-sdk/tmdb-sdk
+git clone https://github.com/pablorotten/tmdb-sdk
 npm install ./tmdb-sdk/ts
 ```
 
 
 ## Tutorial: your first API call
 
-This tutorial walks through creating a client, listing entities, and
-loading a specific record.
+This tutorial walks through creating a client and loading a specific record.
 
 ### 1. Create a client
 
+TMDB expects a Bearer token. Set `TMDB_APIKEY` to the full value, including
+the `Bearer ` prefix (for example, `Bearer <your API Read Access Token>`).
+
 ```ts
-import { TmdbSDK } from '@voxgig-sdk/tmdb-sdk'
+import { TmdbSDK } from 'pablorotten-tmdb-sdk'
 
 const client = new TmdbSDK({
   apikey: process.env.TMDB_APIKEY,
 })
 ```
 
-### 3. Load an episode
+### 2. Load an episode
 
 Episode is nested under season, so provide the `season_id`.
 `load()` returns the entity and throws on failure; `.data()` reads its record:
@@ -5408,7 +5410,7 @@ tmdb/
 Import the SDK from the package root:
 
 ```ts
-import { TmdbSDK } from '@voxgig-sdk/tmdb-sdk'
+import { TmdbSDK } from 'pablorotten-tmdb-sdk'
 ```
 
 ### Entity state
